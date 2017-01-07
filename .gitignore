@@ -1,0 +1,16 @@
+### IGNORE FILES FROM GIT ###
+
+### MAC OSX FILES ###
+*._*
+*.DS_STORE
+
+### MOCKUPS ETC. ###
+*.psd
+*.ai
+*.indd
+
+### PROJECT FILES ###
+*.log
+.dev
+node_modules
+www/wp-content/uploads
