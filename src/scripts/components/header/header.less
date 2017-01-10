@@ -1,0 +1,106 @@
+.page-header {
+
+  position: relative;
+  height: 156px;
+
+  mp-logo {
+    display: inline-block;
+    position: relative;
+    margin-top: 45px;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .header-nav {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .util-nav {
+    top: 26px;
+
+    .button-wrapper {
+      display: inline-block;
+      margin-left: 60px;
+    }
+
+    .button {
+      padding-left: 15px;
+
+      .button-label {
+        &.members:before {
+          position: relative;
+          display: inline-block;
+          left: -5px;
+          content: url('@{imagesDir}/icon-members.svg');
+          background-size: 12px 11px;
+          width: 12px;
+          height: 11px;
+        }
+        &.menu:before {
+          position: relative;
+          left: -5px;
+          content: url('@{imagesDir}/icon-menu.png');
+          width: 10px;
+          height: 10px;
+        }
+      }
+
+
+      .members-icon {
+        position: relative;
+        left: -2px;
+
+        svg {
+          width: 12px;
+          height: 11px;
+        }
+      }
+
+      &.members {
+        padding-left: 12px;
+      }
+
+      .menu-icon {
+        position: relative;
+        left: -2px;
+
+        img {
+          // TODO: see for retina display size
+          width: 10px;
+          height: 10px;
+        }
+      }
+
+      &.menu {
+        padding-left: 11px;
+      }
+    }
+  }
+
+  .main-nav {
+    top: 76px;
+
+    .link {
+      display: inline-block;
+      font: @ffSansSerif;
+      font-weight: @fwBold;
+      font-size: 10pt;
+      text-decoration: none;
+      color: @black;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .link-separator {
+      padding: 0 23px;
+    }
+  }
+
+}

@@ -4,13 +4,15 @@
 *._*
 *.DS_STORE
 
-### MOCKUPS ETC. ###
+### FILETYPES ###
 *.psd
 *.ai
 *.indd
 
-### PROJECT FILES ###
+### PROJECT DIRECTORIES AND FILES ###
 *.log
 .dev
-node_modules
-www/wp-content/uploads
+/assets
+/node_modules
+/www/wp-content/uploads
+/megapode-website-w17

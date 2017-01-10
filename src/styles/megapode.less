@@ -1,0 +1,128 @@
+//===========/----------------------------------------------
+//  [_IMP]  /  Imports
+//=========/------------------------------------------------
+
+@import "common/variables.less";
+@import "common/mixins.less";
+
+
+//===========/----------------------------------------------
+//  [_WOR]  /  Wordpress override
+//=========/------------------------------------------------
+
+/* Remove admin bar */
+#wpadminbar {
+  display: none !important;
+}
+
+body.admin-bar {
+  margin-top: -46px !important;
+
+  // @media (min-width: @desktop) {
+    // margin-top:-32px !important;
+  // }
+}
+
+
+//===========/----------------------------------------------
+//  [_CSS]  /  CSS
+//=========/------------------------------------------------
+
+html, body {
+  background-color: @white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: @ffSansSerif;
+  font-weight: @fwLight;
+}
+
+h1 {
+  font-size: 32pt;
+  letter-spacing: -1pt;
+}
+
+h2 {
+  font-weight: @fwBold;
+  font-size: 13pt;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: @ffSansSerif;
+  font-size: 8pt;
+}
+
+section {
+  padding: 65px 0 75px 0;
+
+  &.light {
+    background-color: @white;
+  }
+  &.dark {
+    background-color: @lightGrey;
+  }
+}
+
+label {
+  display: block;
+  font-size: 11pt;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel] {
+  display: block;
+  border: 1px solid @black;
+  padding: 5px;
+  margin-bottom: 20px;
+  font-size: 10pt;
+}
+
+.subheading {
+  font-size: 11pt;
+  letter-spacing: -0.2pt;
+}
+
+.button {
+  padding: 8px 10px;
+  font: @ffSansSerif;
+  font-weight: @fwBold;
+  font-size: 10pt;
+  text-decoration: none;
+  color: @black;
+  border: 0;
+  cursor: pointer;
+  .buttonGradient();
+  .dropShadow();
+
+  &.huge {
+    padding: 8px 25px 18px;
+    font-weight: @fwLight;
+    font-size: 16pt;
+
+    &:after {
+      position: relative;
+      top: 10px;
+      margin-left: 15px;
+      content: url('@{imagesDir}/huge-button-arrow.png');
+      background-size: 18px 30px;
+      width: 18px;
+      height: 30px;
+    }
+  }
+}
+
+.centered-content {
+  position: relative;
+  margin: 0 auto;
+  width: 965px;
+}
+
+.separator {
+  display: block;
+  margin: 0 auto;
+  width: 30px;
+  height: 5px;
+  background-color: black;
+}

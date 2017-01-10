@@ -1,0 +1,49 @@
+{
+  "name": "megapode-website",
+  "description": "Sources du site megapode.ca",
+  "version": "0.0.1",
+  "author": "Mat Janson Blanchet <mat.jb@jansensan.net> (http://jansensan.net)",
+  "license": "UNLICENSED",
+  "private": true,
+  "homepage": "http://megapode.ca",
+  "repository": {
+    "type": "git",
+    "url": "git+https://jansensan@github.com/jansensan/megapode-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jansensan/megapode-website/issues"
+  },
+  "dependencies": {
+    "angular": "^1.6.1",
+    "jquery": "^3.1.1",
+    "jquery.easing": "^1.4.1",
+    "lodash": "^4.17.4",
+    "normalize.css": "^5.0.0",
+    "signals": "^1.0.0"
+  },
+  "devDependencies": {
+    "del": "^2.2.2",
+    "eslint": "^3.11.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-eslint": "^3.0.1",
+    "gulp-jshint": "^2.0.1",
+    "gulp-less": "^3.3.0",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-plumber": "^1.1.0",
+    "gulp-task-listing": "^1.0.1",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.11",
+    "jshint": "^2.8.0",
+    "jshint-loader": "^0.8.3",
+    "jshint-stylish": "^2.2.0",
+    "require-dir": "^0.3.1",
+    "run-sequence": "^1.2.2"
+  }
+}

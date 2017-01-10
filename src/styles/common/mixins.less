@@ -1,0 +1,22 @@
+.buttonGradient() {
+  background: @bottomYellow; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(@topYellow, @bottomYellow); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(@topYellow, @bottomYellow); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(@topYellow, @bottomYellow); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(@topYellow, @bottomYellow); /* Standard syntax */
+}
+
+.dropShadow() {
+  @offsetX: 0px;
+  @offsetY: 1px;
+  @blurRadius: 3px;
+  @spreadRadius: 2px;
+  @shadowColor: rgba(0,0,0,0.15);
+  -webkit-box-shadow: @offsetX @offsetY @blurRadius @spreadRadius @shadowColor;
+  -moz-box-shadow: @offsetX @offsetY @blurRadius @spreadRadius @shadowColor;
+  box-shadow: @offsetX @offsetY @blurRadius @spreadRadius @shadowColor;
+}
+
+.pngShadow() {
+  filter: drop-shadow(0px 3px 3px rgba(0,0,0,0.2));
+}

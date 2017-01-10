@@ -1,0 +1,166 @@
+// megapode
+@import "../megapode";
+
+// components
+@import "../common/components";
+@import "../../scripts/pages/home/banner/home-banner";
+@import "../../scripts/pages/home/presentation-reservation-form/presentation-reservation-form";
+
+
+.home-page {
+  .section-header {
+    text-align: center;
+  }
+
+  .explore-section {
+    .explore-table {
+      padding: 20px 0 60px 0;
+    }
+    .explore-row {
+      display: block;
+      clear: both;
+      overflow: hidden;
+    }
+    .explore-column {
+      float: left;
+      width: 50%;
+    }
+    .ipad-bg {
+      width: 401px;
+      height: 307px;
+      background-image: url('@{imagesDir}/home-explore-ipad-bg.png');
+
+      &.stick-right {
+        float: right;
+        margin-right: 30px;
+      }
+      &.stick-left {
+        margin-left: 30px;
+      }
+    }
+    .ipad-screen {
+      width: 401px;
+      height: 307px;
+
+      img {
+        display: block;
+        position: relative;
+        top: 24px;
+        left: 24px;
+      }
+    }
+    .explore-feature-cta {
+      font-size: 11pt;
+      text-decoration: none;
+      color: @black;
+
+      &:before {
+        position: relative;
+        top: 11px;
+        margin-right: 10px;
+        content: url('@{imagesDir}/home-explore-feature-cta.png');
+        .pngShadow();
+      }
+    }
+    .feature-overview {
+      .text-content {
+        margin-top: 25px;
+      }
+    }
+    .feature-photos {
+      margin-top: -40px;
+      .text-content {
+        margin-left: 190px;
+        margin-top: 80px;
+      }
+    }
+    .feature-icons {
+      margin-top: -40px;
+      .text-content {
+        margin-top: 80px;
+      }
+    }
+    .explore-other-features {
+      text-align: center;
+    }
+    .explore-other-features-cta {
+      clear: both;
+      display: inline-block;
+      margin: 0 auto;
+    }
+  }
+
+  .why-use-section {
+    .why-use-column {
+      width: 50%;
+      float: left;
+    }
+    .why-use-row {
+      display: block;
+      clear: both;
+      overflow: hidden;
+    }
+    .why-use-market {
+      h2 {
+        text-align: center;
+      }
+      &.stick-right {
+        float: right;
+        margin-right: 5px;
+      }
+      &.stick-left {
+        float: left;
+        margin-left: 5px;
+      }
+      .framed {
+        border: 1px solid @middleGrey;
+        padding: 15px 25px 45px;
+        min-height: 370px;
+        width: 280px;
+      }
+      .market-icon {
+        display: block;
+        margin: 0 auto;
+        &.broker-contact {
+          width: 33px;
+          height: 34px;
+        }
+        &.broker-visits {
+          width: 34px;
+          height: 34px;
+        }
+        &.buyer-geolocation {
+          width: 27px;
+          height: 34px;
+        }
+        &.buyer-plan {
+          width: 34px;
+          height: 34px;
+        }
+      }
+    }
+    .discover-cta {
+      padding: 15px;
+      font-size: 10pt;
+      &:after {
+        margin-left: 29px;
+      }
+    }
+  }
+
+  .lets-talk {
+    .separator {
+      position: relative;
+      top: -40px;
+    }
+    .header-cta{
+      font-weight: @fwBold;
+      font-size: 13pt;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .lets-talk-header {
+      margin-top: 0;
+    }
+  }
+}
