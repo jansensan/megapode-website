@@ -7,7 +7,7 @@
 
     <link rel="icon" href="<?php echo IMG_DIR; ?>favicon.ico" type="image/x-icon" />
 
-    <title>Megapode</title>
+    <title>Megapode – Régions disponibles</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" >
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700" >
