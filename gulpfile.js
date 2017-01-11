@@ -24,6 +24,7 @@ function dev() {
     'styles:home-page:dev',
     'styles:bonjour-page:dev',
     'styles:regions-dispo-page:dev',
+    'styles:comment-utiliser-page:dev',
     'copy:vendor-styles:dev',
     // app
     'template-cache:dev',
@@ -31,6 +32,7 @@ function dev() {
     'build:home-page:dev',
     'build:bonjour-page:dev',
     'build:regions-dispo-page:dev',
+    'build:comment-utiliser-page:dev',
     // 'clean:template-cache'
     'copy:scripts:dev',
     'watch:src'

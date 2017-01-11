@@ -33,6 +33,9 @@ module.exports = function () {
       ].concat(globalComponents),
       regionsDispo: [
         srcScriptDir + 'pages/regions-dispo/**/*.js'
+      ].concat(globalComponents),
+      commentUtiliser: [
+        srcScriptDir + 'pages/comment-utiliser/**/*.js'
       ].concat(globalComponents)
     },
     vendors: {
@@ -77,6 +80,13 @@ module.exports = function () {
               devScriptDir + templatesFileName,
               devScriptDir + 'regions-dispo-page.js'
             ]
+          },
+          commentUtiliser: {
+            dev: scripts.app.commentUtiliser,
+            prod: [
+              devScriptDir + templatesFileName,
+              devScriptDir + 'comment-utiliser-page.js'
+            ]
           }
         },
         vendors: {
@@ -102,7 +112,8 @@ module.exports = function () {
           devScriptDir + 'megapode-templates.js',
           devScriptDir + 'home-page.js',
           devScriptDir + 'bonjour-page.js',
-          devScriptDir + 'regions-dispo-page.js'
+          devScriptDir + 'regions-dispo-page.js',
+          devScriptDir + 'comment-utiliser-page.js'
         ]
       },
       dest: {
@@ -117,7 +128,8 @@ module.exports = function () {
       src: {
         homePage: srcDir + 'styles/site/home-page.less',
         bonjourPage: srcDir + 'styles/site/bonjour-page.less',
-        regionsDisposPage: srcDir + 'styles/site/regions-dispo-page.less'
+        regionsDisposPage: srcDir + 'styles/site/regions-dispo-page.less',
+        commentUtiliserPage: srcDir + 'styles/site/comment-utiliser-page.less'
       },
       dest: themeStylesDir
     },

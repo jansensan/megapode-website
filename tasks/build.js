@@ -10,6 +10,8 @@ gulp.task('build:bonjour-page:dev', buildDevBonjourPage);
 gulp.task('build:bonjour-page', buildBonjourPage);
 gulp.task('build:regions-dispo-page:dev', buildDevRegionsDispoPage);
 gulp.task('build:regions-dispo-page', buildRegionsDispoPage);
+gulp.task('build:comment-utiliser-page:dev', buildDevCommentUtiliserPage);
+gulp.task('build:comment-utiliser-page', buildCommentUtiliserPage);
 gulp.task('build:vendors:dev', buildDevVendors);
 gulp.task('build:vendors', buildVendors);
 
@@ -69,6 +71,26 @@ function buildRegionsDispoPage() {
     .src(config.src.app.regionsDispo.prod)
     // concat files
     .pipe(glp.concat('regions-dispo-page.min.js'))
+    // minify
+    .pipe(glp.uglify())
+    // output file
+    .pipe(gulp.dest(config.dest.prod));
+}
+
+function buildDevCommentUtiliserPage() {
+  return gulp
+    .src(config.src.app.commentUtiliser.dev)
+    // concat files
+    .pipe(glp.concat('comment-utiliser-page.js'))
+    // output file
+    .pipe(gulp.dest(config.dest.dev));
+}
+
+function buildCommentUtiliserPage() {
+  return gulp
+    .src(config.src.app.commentUtiliser.prod)
+    // concat files
+    .pipe(glp.concat('comment-utiliser-page.min.js'))
     // minify
     .pipe(glp.uglify())
     // output file
