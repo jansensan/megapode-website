@@ -3,64 +3,10 @@
   'use strict';
 
   angular
-    .module('mp.pages.HomePage', [
+    .module('mp.pages.CommentUtiliserPage', [
       'mp.components.Footer',
-      'mp.components.Header',
-      'mp.components.HomeBanner',
-      'mp.components.PresentationReservationForm'
+      'mp.components.Header'
     ]);
-
-})();
-
-(function () {
-
-  'use strict';
-
-  angular
-    .module('mp.components.HomeBanner', [
-      'mp.components.DownloadCTA',
-      'mp.resources.Templates'
-    ])
-    .directive('mpHomeBanner', Directive);
-
-  function Directive() {
-    return {
-      restrict: 'E',
-      scope: {},
-      templateUrl: '/pages/home/banner/home-banner-template.html',
-    };
-  }
-
-})();
-
-(function () {
-
-  'use strict';
-
-  angular
-    .module('mp.components.PresentationReservationForm', [
-      'mp.resources.Templates'
-    ])
-    .directive('mpPresentationReservationForm', Directive);
-
-  function Directive() {
-    return {
-      restrict: 'E',
-      controller: Controller,
-      controllerAs: 'vm',
-      scope: {},
-      templateUrl: '/pages/home/presentation-reservation-form/presentation-reservation-form-template.html',
-    };
-  }
-
-  function Controller() {
-    var vm = this;
-    vm.submitForm = submitForm;
-
-    function submitForm() {
-      console.log('submitForm');
-    }
-  }
 
 })();
 

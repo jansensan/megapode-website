@@ -28,8 +28,11 @@ h2 {
   text-transform: uppercase;
 }
 p {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
   font-family: 'Roboto', sans-serif;
   font-size: 8pt;
+  line-height: 1.5;
 }
 section {
   padding: 65px 0 75px 0;
@@ -81,7 +84,8 @@ input[type=tel] {
   box-shadow: 0px 1px 3px 2px rgba(0, 0, 0, 0.15);
 }
 .button.huge {
-  padding: 8px 25px 18px;
+  display: inline-block;
+  padding: 8px 25px 14px;
   font-weight: 300;
   font-size: 16pt;
 }
@@ -105,6 +109,24 @@ input[type=tel] {
   width: 30px;
   height: 5px;
   background-color: black;
+}
+.left-menu {
+  float: left;
+  margin-right: 15px;
+  width: 310px;
+  height: 100%;
+}
+.left-menu .top-line {
+  width: 310px;
+  height: 5px;
+  background-color: #262322;
+}
+.page-content {
+  display: inline-block;
+  width: 640px;
+}
+.page-content h2 {
+  margin-top: 50px;
 }
 .logo {
   width: 305px;
@@ -331,6 +353,11 @@ input[type=tel] {
 .presentation-reservation-form .name-part.first-name {
   margin-right: 5px;
 }
+.home-page p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.25;
+}
 .home-page .section-header {
   text-align: center;
 }
@@ -427,8 +454,10 @@ input[type=tel] {
 .home-page .why-use-section .why-use-market .framed {
   border: 1px solid #cccccc;
   padding: 15px 25px 45px;
-  min-height: 370px;
   width: 280px;
+}
+.home-page .why-use-section .why-use-market .market-selling-points {
+  min-height: 350px;
 }
 .home-page .why-use-section .why-use-market .market-icon {
   display: block;
@@ -451,7 +480,7 @@ input[type=tel] {
   height: 34px;
 }
 .home-page .why-use-section .discover-cta {
-  padding: 15px;
+  padding: 0px 15px 15px 15px;
   font-size: 10pt;
 }
 .home-page .why-use-section .discover-cta:after {
