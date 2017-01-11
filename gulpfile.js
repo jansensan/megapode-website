@@ -22,11 +22,13 @@ function dev() {
     'lint',
     // styles
     'styles:home-page:dev',
+    'styles:bonjour-page:dev',
     'copy:vendor-styles:dev',
     // app
     'template-cache:dev',
     'build:vendors:dev',
     'build:home-page:dev',
+    'build:bonjour-page:dev',
     // 'clean:template-cache'
     'copy:scripts:dev',
     'watch:src'

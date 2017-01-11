@@ -5,17 +5,32 @@ var config = require('../gulp-config')().styles,
 
 // tasks definitions
 gulp.task('styles:home-page:dev', compileDevHomePage);
+gulp.task('styles:bonjour-page:dev', compileDevBonjourPage);
 
 
 // methods definitions
-function compileDevHomePage() {
+function compileDevStyles(src, dest) {
   return gulp
-    .src(config.src.homePage)
+    .src(src)
     .pipe(glp.plumber(
       function (error) {
         console.error(error);
       }
     ))
     .pipe(glp.less())
-    .pipe(gulp.dest(config.dest));
+    .pipe(gulp.dest(dest));
+}
+
+function compileDevHomePage() {
+  return compileDevStyles(
+    config.src.homePage,
+    config.dest
+  );
+}
+
+function compileDevBonjourPage() {
+  return compileDevStyles(
+    config.src.bonjourPage,
+    config.dest
+  );
 }

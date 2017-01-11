@@ -27,6 +27,9 @@ module.exports = function () {
     app: {
       home: [
         srcScriptDir + 'pages/home/**/*.js'
+      ].concat(globalComponents),
+      bonjour: [
+        srcScriptDir + 'pages/bonjour/**/*.js'
       ].concat(globalComponents)
     },
     vendors: {
@@ -57,6 +60,13 @@ module.exports = function () {
               devScriptDir + templatesFileName,
               devScriptDir + 'home-page.js'
             ]
+          },
+          bonjour: {
+            dev: scripts.app.bonjour,
+            prod: [
+              devScriptDir + templatesFileName,
+              devScriptDir + 'bonjour-page.js'
+            ]
           }
         },
         vendors: {
@@ -80,7 +90,8 @@ module.exports = function () {
         scripts: [
           devScriptDir + 'vendors.js',
           devScriptDir + 'megapode-templates.js',
-          devScriptDir + 'home-page.js'
+          devScriptDir + 'home-page.js',
+          devScriptDir + 'bonjour-page.js'
         ]
       },
       dest: {
@@ -93,7 +104,8 @@ module.exports = function () {
     },
     styles: {
       src: {
-        homePage: srcDir + 'styles/site/home-page.less'
+        homePage: srcDir + 'styles/site/home-page.less',
+        bonjourPage: srcDir + 'styles/site/bonjour-page.less'
       },
       dest: themeStylesDir
     },

@@ -49,8 +49,11 @@ h2 {
 }
 
 p {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
   font-family: @ffSansSerif;
   font-size: 8pt;
+  line-height: 1.5;
 }
 
 section {
@@ -125,4 +128,26 @@ input[type=tel] {
   width: 30px;
   height: 5px;
   background-color: black;
+}
+
+.left-menu {
+  float: left;
+  margin-right: 15px;
+  width: 310px;
+  height: 100%;
+
+  .top-line {
+    width: 310px;
+    height: 5px;
+    background-color: @black;
+  }
+}
+
+.page-content {
+  display: inline-block;
+  width: 640px;
+
+  h2 {
+    margin-top: 50px;
+  }
 }
