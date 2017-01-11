@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" >
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700" >
     <link rel="stylesheet" href="<?php echo CSS_DIR; ?>normalize.css" >
-    <link rel="stylesheet" href="<?php echo CSS_DIR; ?>home-page.css" >
+    <link rel="stylesheet" href="<?php echo CSS_DIR; ?>comment-utiliser-page.css" >
   </head>
 
   <body class="regions-dispo-page" ng-app="mp.pages.CommentUtiliserPage">
