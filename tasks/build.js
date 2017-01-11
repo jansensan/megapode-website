@@ -57,7 +57,7 @@ function buildBonjourPage() {
 
 function buildDevRegionsDispoPage() {
   return gulp
-    .src(config.src.app.regions-dispo.dev)
+    .src(config.src.app.regionsDispo.dev)
     // concat files
     .pipe(glp.concat('regions-dispo-page.js'))
     // output file
@@ -66,9 +66,9 @@ function buildDevRegionsDispoPage() {
 
 function buildRegionsDispoPage() {
   return gulp
-    .src(config.src.app.bonjour.prod)
+    .src(config.src.app.regionsDispo.prod)
     // concat files
-    .pipe(glp.concat('bonjour-page.min.js'))
+    .pipe(glp.concat('regions-dispo-page.min.js'))
     // minify
     .pipe(glp.uglify())
     // output file

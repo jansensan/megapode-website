@@ -30,6 +30,9 @@ module.exports = function () {
       ].concat(globalComponents),
       bonjour: [
         srcScriptDir + 'pages/bonjour/**/*.js'
+      ].concat(globalComponents),
+      regionsDispo: [
+        srcScriptDir + 'pages/regions-dispo/**/*.js'
       ].concat(globalComponents)
     },
     vendors: {
@@ -67,6 +70,13 @@ module.exports = function () {
               devScriptDir + templatesFileName,
               devScriptDir + 'bonjour-page.js'
             ]
+          },
+          regionsDispo: {
+            dev: scripts.app.regionsDispo,
+            prod: [
+              devScriptDir + templatesFileName,
+              devScriptDir + 'regions-dispo-page.js'
+            ]
           }
         },
         vendors: {
@@ -91,7 +101,8 @@ module.exports = function () {
           devScriptDir + 'vendors.js',
           devScriptDir + 'megapode-templates.js',
           devScriptDir + 'home-page.js',
-          devScriptDir + 'bonjour-page.js'
+          devScriptDir + 'bonjour-page.js',
+          devScriptDir + 'regions-dispo-page.js'
         ]
       },
       dest: {
@@ -105,7 +116,8 @@ module.exports = function () {
     styles: {
       src: {
         homePage: srcDir + 'styles/site/home-page.less',
-        bonjourPage: srcDir + 'styles/site/bonjour-page.less'
+        bonjourPage: srcDir + 'styles/site/bonjour-page.less',
+        regionsDisposPage: srcDir + 'styles/site/regions-dispo-page.less'
       },
       dest: themeStylesDir
     },

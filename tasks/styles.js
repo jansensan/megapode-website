@@ -6,6 +6,7 @@ var config = require('../gulp-config')().styles,
 // tasks definitions
 gulp.task('styles:home-page:dev', compileDevHomePage);
 gulp.task('styles:bonjour-page:dev', compileDevBonjourPage);
+gulp.task('styles:regions-dispo-page:dev', compileDevRegionsDispoPage);
 
 
 // methods definitions
@@ -31,6 +32,13 @@ function compileDevHomePage() {
 function compileDevBonjourPage() {
   return compileDevStyles(
     config.src.bonjourPage,
+    config.dest
+  );
+}
+
+function compileDevRegionsDispoPage() {
+  return compileDevStyles(
+    config.src.regionsDisposPage,
     config.dest
   );
 }
