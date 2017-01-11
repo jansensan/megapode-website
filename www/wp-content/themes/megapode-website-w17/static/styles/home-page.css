@@ -216,7 +216,7 @@ input[type=tel] {
   position: relative;
   height: 156px;
 }
-.page-header mp-logo {
+.page-header .logo-button {
   display: inline-block;
   position: relative;
   margin-top: 45px;

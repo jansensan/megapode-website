@@ -3,27 +3,6 @@
   'use strict';
 
   angular
-    .module('mp.components.Footer', [
-      'mp.components.DownloadCTA',
-      'mp.resources.Templates'
-    ])
-    .directive('mpFooter', Directive);
-
-  function Directive() {
-    return {
-      restrict: 'E',
-      scope: {},
-      templateUrl: '/components/footer/footer-template.html',
-    };
-  }
-
-})();
-
-(function () {
-
-  'use strict';
-
-  angular
     .module('mp.components.DownloadCTA', [
       'mp.resources.Templates'
     ])
@@ -36,6 +15,27 @@
         devicesColor: '='
       },
       templateUrl: '/components/download-cta/download-cta-template.html',
+    };
+  }
+
+})();
+
+(function () {
+
+  'use strict';
+
+  angular
+    .module('mp.components.Footer', [
+      'mp.components.DownloadCTA',
+      'mp.resources.Templates'
+    ])
+    .directive('mpFooter', Directive);
+
+  function Directive() {
+    return {
+      restrict: 'E',
+      scope: {},
+      templateUrl: '/components/footer/footer-template.html',
     };
   }
 
@@ -67,141 +67,6 @@
     // public api
     var vm = this;
     vm.requestMenu = menuModel.requestMenu;
-  }
-
-})();
-
-(function () {
-
-  'use strict';
-
-  angular
-    .module('mp.models.MenuModel', [])
-    .factory('menuModel', MenuModel);
-
-  function MenuModel() {
-    var _model = {
-      isVisible: false,
-      // signals
-      menuDisplayRequested: new signals.Signal(),
-      menuDismissalRequested: new signals.Signal(),
-      // methods
-      dismissMenu: dismissMenu,
-      requestMenu: requestMenu
-    };
-    return _model;
-
-    // methods definitions
-    function dismissMenu() {
-      _model.menuDismissalRequested.dispatch();
-    }
-
-    function requestMenu() {
-      _model.menuDisplayRequested.dispatch();
-    }
-  }
-
-})();
-
-(function () {
-
-  'use strict';
-
-  angular
-    .module('mp.components.Menu', [
-      'mp.components.Logo',
-      'mp.models.MenuModel',
-      'mp.models.VeilModel',
-      'mp.resources.Templates'
-    ])
-    .directive('mpMenu', Directive);
-
-  function Directive() {
-    return {
-      restrict: 'E',
-      controller: Controller,
-      controllerAs: 'vm',
-      scope: {},
-      templateUrl: '/components/menu/menu-template.html',
-    };
-  }
-
-  function Controller(menuModel, veilModel) {
-    // public api
-    var vm = this;
-    vm.hide = hide;
-    vm.show = show;
-
-    // auto activation
-    activate();
-
-    // methods definitions
-    function hide() {
-      veilModel.dismissVeil();
-      $('#mainMenu')
-        .animate(
-          {right: -430},  // props
-          250,            // duration
-          'easeInCirc',   // easing
-          function onHidden() {
-            menuModel.isVisible = false;
-          }
-        );
-    }
-
-    function show() {
-      menuModel.isVisible = true;
-      veilModel.requestVeil();
-      $('#mainMenu')
-        .animate(
-          {right: 0},     // props
-          500,            // duration
-          'easeOutCirc',  // easing
-          function onShown() {}
-        );
-    }
-
-    // private methods definitions
-    function activate() {
-      menuModel.menuDisplayRequested.add(onMenuDisplayRequested);
-      menuModel.menuDismissalRequested.add(onMenuDismissalRequested);
-      veilModel.veilClicked.add(onVeilClicked);
-    }
-
-    function onMenuDisplayRequested() {
-      show();
-    }
-
-    function onMenuDismissalRequested() {
-      hide();
-    }
-
-    function onVeilClicked() {
-      if (!menuModel.isVisible) {
-        return;
-      }
-      hide();
-    }
-  }
-
-})();
-
-(function () {
-
-  'use strict';
-
-  angular
-    .module('mp.components.Logo', [
-      'mp.resources.Templates'
-    ])
-    .directive('mpLogo', Directive);
-
-  function Directive() {
-    return {
-      restrict: 'E',
-      scope: {},
-      templateUrl: '/components/logo/logo-template.html',
-    };
   }
 
 })();
@@ -319,6 +184,141 @@
     }
 
     function onVeilDismissalRequested() {
+      hide();
+    }
+  }
+
+})();
+
+(function () {
+
+  'use strict';
+
+  angular
+    .module('mp.components.Logo', [
+      'mp.resources.Templates'
+    ])
+    .directive('mpLogo', Directive);
+
+  function Directive() {
+    return {
+      restrict: 'E',
+      scope: {},
+      templateUrl: '/components/logo/logo-template.html',
+    };
+  }
+
+})();
+
+(function () {
+
+  'use strict';
+
+  angular
+    .module('mp.models.MenuModel', [])
+    .factory('menuModel', MenuModel);
+
+  function MenuModel() {
+    var _model = {
+      isVisible: false,
+      // signals
+      menuDisplayRequested: new signals.Signal(),
+      menuDismissalRequested: new signals.Signal(),
+      // methods
+      dismissMenu: dismissMenu,
+      requestMenu: requestMenu
+    };
+    return _model;
+
+    // methods definitions
+    function dismissMenu() {
+      _model.menuDismissalRequested.dispatch();
+    }
+
+    function requestMenu() {
+      _model.menuDisplayRequested.dispatch();
+    }
+  }
+
+})();
+
+(function () {
+
+  'use strict';
+
+  angular
+    .module('mp.components.Menu', [
+      'mp.components.Logo',
+      'mp.models.MenuModel',
+      'mp.models.VeilModel',
+      'mp.resources.Templates'
+    ])
+    .directive('mpMenu', Directive);
+
+  function Directive() {
+    return {
+      restrict: 'E',
+      controller: Controller,
+      controllerAs: 'vm',
+      scope: {},
+      templateUrl: '/components/menu/menu-template.html',
+    };
+  }
+
+  function Controller(menuModel, veilModel) {
+    // public api
+    var vm = this;
+    vm.hide = hide;
+    vm.show = show;
+
+    // auto activation
+    activate();
+
+    // methods definitions
+    function hide() {
+      veilModel.dismissVeil();
+      $('#mainMenu')
+        .animate(
+          {right: -430},  // props
+          250,            // duration
+          'easeInCirc',   // easing
+          function onHidden() {
+            menuModel.isVisible = false;
+          }
+        );
+    }
+
+    function show() {
+      menuModel.isVisible = true;
+      veilModel.requestVeil();
+      $('#mainMenu')
+        .animate(
+          {right: 0},     // props
+          500,            // duration
+          'easeOutCirc',  // easing
+          function onShown() {}
+        );
+    }
+
+    // private methods definitions
+    function activate() {
+      menuModel.menuDisplayRequested.add(onMenuDisplayRequested);
+      menuModel.menuDismissalRequested.add(onMenuDismissalRequested);
+      veilModel.veilClicked.add(onVeilClicked);
+    }
+
+    function onMenuDisplayRequested() {
+      show();
+    }
+
+    function onMenuDismissalRequested() {
+      hide();
+    }
+
+    function onVeilClicked() {
+      if (!menuModel.isVisible) {
+        return;
+      }
       hide();
     }
   }

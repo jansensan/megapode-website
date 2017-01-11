@@ -3,27 +3,6 @@
   'use strict';
 
   angular
-    .module('mp.components.Footer', [
-      'mp.components.DownloadCTA',
-      'mp.resources.Templates'
-    ])
-    .directive('mpFooter', Directive);
-
-  function Directive() {
-    return {
-      restrict: 'E',
-      scope: {},
-      templateUrl: '/components/footer/footer-template.html',
-    };
-  }
-
-})();
-
-(function () {
-
-  'use strict';
-
-  angular
     .module('mp.components.DownloadCTA', [
       'mp.resources.Templates'
     ])
@@ -46,16 +25,17 @@
   'use strict';
 
   angular
-    .module('mp.components.Logo', [
+    .module('mp.components.Footer', [
+      'mp.components.DownloadCTA',
       'mp.resources.Templates'
     ])
-    .directive('mpLogo', Directive);
+    .directive('mpFooter', Directive);
 
   function Directive() {
     return {
       restrict: 'E',
       scope: {},
-      templateUrl: '/components/logo/logo-template.html',
+      templateUrl: '/components/footer/footer-template.html',
     };
   }
 
@@ -321,6 +301,26 @@
     function onVeilDismissalRequested() {
       hide();
     }
+  }
+
+})();
+
+(function () {
+
+  'use strict';
+
+  angular
+    .module('mp.components.Logo', [
+      'mp.resources.Templates'
+    ])
+    .directive('mpLogo', Directive);
+
+  function Directive() {
+    return {
+      restrict: 'E',
+      scope: {},
+      templateUrl: '/components/logo/logo-template.html',
+    };
   }
 
 })();
