@@ -1,7 +1,67 @@
 // megapode
 @import "../megapode";
 
+// components
+@import "../common/components";
+
 
 .bonjour-page {
+  .leaders-container {
+    display: block;
+    width: 620px;
+    overflow: hidden;
 
+    .leader {
+      float: left;
+      width: 190px;
+      margin-right: 25px;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+
+      .leader-photo {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+        overflow: hidden;
+      }
+      .leader-name {
+        font-size: 11pt;
+        line-height: 1.1;
+      }
+      .leader-linkedin {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-left: 10px;
+      }
+      .leader-title {
+        font-size: 8pt;
+        line-height: 1.1;
+      }
+      .leader-description {
+        font-size: 8pt;
+        line-height: 1.5;
+      }
+    }
+  }
+  .partners-container {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+
+    .partner-logo {
+      float: left;
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      background-color: @black;
+      margin: 0 65px 40px 0;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
 }
