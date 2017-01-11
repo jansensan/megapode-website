@@ -17,6 +17,8 @@
 
   <body class="regions-dispo-page" ng-app="mp.pages.CommentUtiliserPage">
     <mp-header></mp-header>
+    <mp-veil></mp-veil>
+    <mp-menu></mp-menu>
 
     <div class="centered-content">
       <section class="left-menu">

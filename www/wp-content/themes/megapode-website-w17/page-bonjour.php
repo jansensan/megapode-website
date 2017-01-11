@@ -17,6 +17,8 @@
 
   <body class="bonjour-page" ng-app="mp.pages.BonjourPage">
     <mp-header></mp-header>
+    <mp-veil></mp-veil>
+    <mp-menu></mp-menu>
 
     <div class="centered-content">
       <section class="left-menu">

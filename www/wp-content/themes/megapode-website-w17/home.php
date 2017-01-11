@@ -17,6 +17,8 @@
 
   <body class="home-page" ng-app="mp.pages.HomePage">
     <mp-header></mp-header>
+    <mp-veil></mp-veil>
+    <mp-menu></mp-menu>
 
     <mp-home-banner></mp-home-banner>
 

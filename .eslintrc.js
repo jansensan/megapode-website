@@ -7,7 +7,8 @@ module.exports = {
     // vendors
     "_": true,
     "$": true,
-    "angular": true
+    "angular": true,
+    "signals": true
   },
   "rules": {
     "linebreak-style": [
