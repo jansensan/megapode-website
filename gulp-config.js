@@ -16,27 +16,26 @@ module.exports = function () {
     themeStylesDir = themeStaticDir + 'styles/';
 
 
-  var globalComponents = [
-    srcComponentsDir + 'logo/logo.js',
-    srcComponentsDir + 'download-cta/download-cta.js',
-    srcComponentsDir + 'header/header.js',
-    srcComponentsDir + 'footer/footer.js'
-  ];
+  var globalComponents = srcComponentsDir + '**/*.js'
   var scripts = {
     sources: srcDir + 'scripts/',
     app: {
       home: [
+        globalComponents,
         srcScriptDir + 'pages/home/**/*.js'
-      ].concat(globalComponents),
+      ],
       bonjour: [
+        globalComponents,
         srcScriptDir + 'pages/bonjour/**/*.js'
-      ].concat(globalComponents),
+      ],
       regionsDispo: [
+        globalComponents,
         srcScriptDir + 'pages/regions-dispo/**/*.js'
-      ].concat(globalComponents),
+      ],
       commentUtiliser: [
+        globalComponents,
         srcScriptDir + 'pages/comment-utiliser/**/*.js'
-      ].concat(globalComponents)
+      ]
     },
     vendors: {
       dev: [
