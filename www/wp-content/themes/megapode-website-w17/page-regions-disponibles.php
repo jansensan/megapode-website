@@ -28,7 +28,7 @@
         <h2>Nos zones d'opérations</h2>
         <p class="subheading">Nos services sont disponibles dans tout le Québec.</p>
         <p>Les demandes de services dans les régions illustrées* ci-bas sont libres de frais de transports. Nos zones de service sans frais de transport sont en croissance constante et évoluent selon la demande et le volume d’affaire des bureaux. Faites-nous part de votre intérêt afin de nous guider dans notre mise en marché et ajouter votre région à notre liste.</p>
-        <a href="#" class="button huge">Réservez une présentation pour <vo></vo>tre agence</a>
+        <a href="#" class="button huge">Réservez une présentation pour votre agence</a>
       </section>
     </div>
 
