@@ -1,7 +1,62 @@
 // megapode
 @import "../megapode";
 
+// components
+@import "../common/components";
 
-.regions-dispo {
 
+.regions-dispo-page {
+  .reserve-presentation {
+    font-weight: @fwLight;
+    font-size: 11pt;
+  }
+
+  .maps-container {
+    display: block;
+    width: 600px;
+    margin-top: 50px;
+    overflow: hidden;
+
+    .map {
+      float: left;
+      margin-bottom: 15px;
+
+      &:nth-child(2n) {
+        margin-left: 40px;
+      }
+
+      .map-name {
+        margin-bottom: 15px;
+        font-weight: @fwLight;
+        font-size: 10pt;
+        line-height: 1;
+      }
+      .map-image {
+        width: 278px;
+        height: 161px;
+        overflow: hidden;
+      }
+      .map-cta {
+        margin-top: 28px;
+        width: 248px;
+        height: 136px;
+        padding: 15px 15px 10px 15px;
+        &:after {
+          float: right;
+          top: 0;
+        }
+        .line1 {
+          display: block;
+          font-size: 10pt;
+          line-height: 1.5;
+          margin-bottom: 5px;
+        }
+        .line2 {
+          display: block;
+          font-size: 8pt;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
 }

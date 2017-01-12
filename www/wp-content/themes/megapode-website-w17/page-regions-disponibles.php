@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" >
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700" >
     <link rel="stylesheet" href="<?php echo CSS_DIR; ?>normalize.css" >
-    <link rel="stylesheet" href="<?php echo CSS_DIR; ?>home-page.css" >
+    <link rel="stylesheet" href="<?php echo CSS_DIR; ?>regions-dispo-page.css" >
   </head>
 
   <body class="regions-dispo-page" ng-app="mp.pages.RegionsDispoPage">
@@ -30,7 +30,64 @@
         <h2>Nos zones d'opérations</h2>
         <p class="subheading">Nos services sont disponibles dans tout le Québec.</p>
         <p>Les demandes de services dans les régions illustrées* ci-bas sont libres de frais de transports. Nos zones de service sans frais de transport sont en croissance constante et évoluent selon la demande et le volume d’affaire des bureaux. Faites-nous part de votre intérêt afin de nous guider dans notre mise en marché et ajouter votre région à notre liste.</p>
-        <a href="#" class="button huge">Réservez une présentation pour votre agence</a>
+        <a
+          href="#"
+          class="button medium"
+        >Réservez une présentation pour votre agence</a>
+
+        <div class="maps-container">
+          <div class="map montreal-metro">
+            <div class="map-name">Région Métropolitaine de Montréal</div>
+            <div class="map-image">
+              <img
+                src="<?php echo IMG_DIR; ?>regions-montreal-metro.jpg"
+                alt="Carte de la Région Métropolitaine de Montréal"
+              >
+            </div>
+          </div>
+          <div class="map capitale-nationale">
+            <div class="map-name">Capitale-Nationale</div>
+            <div class="map-image">
+              <img
+                src="<?php echo IMG_DIR; ?>regions-capitale-nationale.jpg"
+                alt="Carte de la Capitale-Nationale"
+              >
+            </div>
+          </div>
+          <div class="map gatineau">
+            <div class="map-name">Gatineau</div>
+            <div class="map-image">
+              <img
+                src="<?php echo IMG_DIR; ?>regions-gatineau.jpg"
+                alt="Carte de Gatineau"
+              >
+            </div>
+          </div>
+          <div class="map trois-rivieres">
+            <div class="map-name">Trois-Rivières</div>
+            <div class="map-image">
+              <img
+                src="<?php echo IMG_DIR; ?>regions-trois-rivieres.jpg"
+                alt="Carte de Trois-Rivières"
+              >
+            </div>
+          </div>
+          <div class="map sherbrooke">
+            <div class="map-name">Sherbrooke</div>
+            <div class="map-image">
+              <img
+                src="<?php echo IMG_DIR; ?>regions-sherbrooke.jpg"
+                alt="Carte de Sherbrooke"
+              >
+            </div>
+          </div>
+          <div class="map cta">
+            <a href="#" class="button medium map-cta">
+              <span class="line1">Faites-nous part de votre intérêt afin de guider notre expansion à travers le Québec.</span>
+              <span class="line2">Nous prenons de l’expansion sans cesse en suivant la demande, faites-nous par de votre intérêt en réservant une présentation pour votre agence.</span>
+            </a>
+          </div>
+        </div>
       </section>
     </div>
 
