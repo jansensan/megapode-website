@@ -184,9 +184,14 @@
 
     <mp-footer></mp-footer>
 
-    <script src="<?php echo SCRIPTS_DIR; ?>vendors.js"></script>
-    <script src="<?php echo SCRIPTS_DIR; ?>megapode-templates.js"></script>
-    <script src="<?php echo SCRIPTS_DIR; ?>home-page.js"></script>
+    <?php if (IS_PROD): ?>
+      <script src="<?php echo SCRIPTS_DIR; ?>vendors.min.js"></script>
+      <script src="<?php echo SCRIPTS_DIR; ?>home-page.min.js"></script>
+    <?php else: ?>
+      <script src="<?php echo SCRIPTS_DIR; ?>vendors.js"></script>
+      <script src="<?php echo SCRIPTS_DIR; ?>megapode-templates.js"></script>
+      <script src="<?php echo SCRIPTS_DIR; ?>home-page.js"></script>
+    <?php endif; ?>
   </body>
 
 </html>

@@ -37,20 +37,12 @@ module.exports = function () {
         srcScriptDir + 'pages/comment-utiliser/**/*.js'
       ]
     },
-    vendors: {
-      dev: [
-        npmDir + 'jquery/dist/jquery.js',
-        npmDir + 'jquery.easing/jquery.easing.js',
-        npmDir + 'angular/angular.js',
-        npmDir + 'signals/dist/signals.js'
-      ],
-      prod: [
-        npmDir + 'jquery/dist/jquery.min.js',
-        npmDir + 'jquery.easing/jquery.easing.min.js',
-        npmDir + 'angular/angular.min.js',
-        npmDir + 'signals/dist/signals.min.js'
-      ]
-    }
+    vendors: [
+      npmDir + 'jquery/dist/jquery.js',
+      npmDir + 'jquery.easing/jquery.easing.js',
+      npmDir + 'angular/angular.js',
+      npmDir + 'signals/dist/signals.js'
+    ]
   };
 
   var pipelines = {
@@ -86,10 +78,7 @@ module.exports = function () {
             ]
           }
         },
-        vendors: {
-          dev: scripts.vendors.dev,
-          prod: scripts.vendors.prod
-        }
+        vendors: scripts.vendors
       },
       dest: {
         dev: devScriptDir,

@@ -25,5 +25,6 @@
     var vm = this;
     vm.requestMenu = menuModel.requestMenu;
   }
+  Controller.$inject = ['menuModel'];
 
 })();

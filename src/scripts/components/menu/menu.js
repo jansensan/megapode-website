@@ -78,5 +78,6 @@
       hide();
     }
   }
+  Controller.$inject = ['menuModel', 'veilModel'];
 
 })();

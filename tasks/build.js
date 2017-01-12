@@ -48,9 +48,9 @@ function buildDevBonjourPage() {
 
 function buildBonjourPage() {
   return gulp
-    .src(config.src.app.regionsDispo.prod)
+    .src(config.src.app.bonjour.prod)
     // concat files
-    .pipe(glp.concat('regions-dispo-page.min.js'))
+    .pipe(glp.concat('bonjour-page.min.js'))
     // minify
     .pipe(glp.uglify())
     // output file
@@ -99,7 +99,7 @@ function buildCommentUtiliserPage() {
 
 function buildDevVendors() {
   return gulp
-    .src(config.src.vendors.dev)
+    .src(config.src.vendors)
     // concat files
     .pipe(glp.concat('vendors.js'))
     // output file
@@ -108,9 +108,11 @@ function buildDevVendors() {
 
 function buildVendors() {
   return gulp
-    .src(config.src.vendors.prod)
+    .src(config.src.vendors)
     // concat files
     .pipe(glp.concat('vendors.min.js'))
+    // minify
+    .pipe(glp.uglify({preserveComments: 'license'}))
     // output file
     .pipe(gulp.dest(config.dest.prod));
 }

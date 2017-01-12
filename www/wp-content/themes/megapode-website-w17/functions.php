@@ -4,6 +4,10 @@
 //  [_CON]  /  Constants
 //=========/------------------------------------------------
 
+// prod state
+define("IS_PROD", true);
+
+
 // directories
 define("THEME_DIR",       get_stylesheet_directory_uri() . "/");
 

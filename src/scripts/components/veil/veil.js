@@ -76,5 +76,6 @@
       hide();
     }
   }
+  Controller.$inject = ['$document', 'veilModel'];
 
 })();
