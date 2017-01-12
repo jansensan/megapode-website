@@ -42,14 +42,12 @@ module.exports = function () {
         npmDir + 'jquery/dist/jquery.js',
         npmDir + 'jquery.easing/jquery.easing.js',
         npmDir + 'angular/angular.js',
-        npmDir + 'lodash/lodash.js',
         npmDir + 'signals/dist/signals.js'
       ],
       prod: [
         npmDir + 'jquery/dist/jquery.min.js',
         npmDir + 'jquery.easing/jquery.easing.min.js',
         npmDir + 'angular/angular.min.js',
-        npmDir + 'lodash/lodash.min.js',
         npmDir + 'signals/dist/signals.min.js'
       ]
     }
