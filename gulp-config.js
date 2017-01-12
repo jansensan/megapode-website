@@ -99,7 +99,9 @@ module.exports = function () {
       }
     },
     clean: {
-      devDir: devDir
+      devDir: devDir,
+      themeScriptsDir: themeScriptsDir,
+      themeStylesDir: themeStylesDir
     },
     copy: {
       src: {

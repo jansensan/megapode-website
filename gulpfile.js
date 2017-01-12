@@ -18,6 +18,9 @@ gulp.task('dev', dev);
 // tasks definitions
 function dev() {
   runSequence(
+    'clean:dev-dir',
+    'clean:theme-scripts-dir',
+    'clean:theme-styles-dir',
     // linting
     'lint',
     // styles
