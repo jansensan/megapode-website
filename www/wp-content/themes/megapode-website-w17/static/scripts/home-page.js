@@ -24,36 +24,6 @@
   'use strict';
 
   angular
-    .module('mp.components.Header', [
-      'mp.components.Logo',
-      'mp.models.MenuModel',
-      'mp.resources.Templates'
-    ])
-    .directive('mpHeader', Directive);
-
-  function Directive() {
-    return {
-      restrict: 'E',
-      controller: Controller,
-      controllerAs: 'vm',
-      scope: {},
-      templateUrl: '/components/header/header-template.html',
-    };
-  }
-
-  function Controller(menuModel) {
-    // public api
-    var vm = this;
-    vm.requestMenu = menuModel.requestMenu;
-  }
-
-})();
-
-(function () {
-
-  'use strict';
-
-  angular
     .module('mp.components.DownloadCTA', [
       'mp.resources.Templates'
     ])
@@ -76,17 +46,27 @@
   'use strict';
 
   angular
-    .module('mp.components.Logo', [
+    .module('mp.components.Header', [
+      'mp.components.Logo',
+      'mp.models.MenuModel',
       'mp.resources.Templates'
     ])
-    .directive('mpLogo', Directive);
+    .directive('mpHeader', Directive);
 
   function Directive() {
     return {
       restrict: 'E',
+      controller: Controller,
+      controllerAs: 'vm',
       scope: {},
-      templateUrl: '/components/logo/logo-template.html',
+      templateUrl: '/components/header/header-template.html',
     };
+  }
+
+  function Controller(menuModel) {
+    // public api
+    var vm = this;
+    vm.requestMenu = menuModel.requestMenu;
   }
 
 })();
@@ -202,6 +182,26 @@
       }
       hide();
     }
+  }
+
+})();
+
+(function () {
+
+  'use strict';
+
+  angular
+    .module('mp.components.Logo', [
+      'mp.resources.Templates'
+    ])
+    .directive('mpLogo', Directive);
+
+  function Directive() {
+    return {
+      restrict: 'E',
+      scope: {},
+      templateUrl: '/components/logo/logo-template.html',
+    };
   }
 
 })();
