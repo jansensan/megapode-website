@@ -83,6 +83,21 @@ input[type=tel] {
   -moz-box-shadow: 0px 1px 3px 2px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 1px 3px 2px rgba(0, 0, 0, 0.15);
 }
+.button.medium {
+  display: inline-block;
+  padding: 0px 15px 15px 15px;
+  font-weight: 300;
+  font-size: 10pt;
+}
+.button.medium:after {
+  position: relative;
+  top: 10px;
+  margin-left: 15px;
+  content: url('/wp-content/themes/megapode-website-w17/static/images/huge-button-arrow.png');
+  background-size: 18px 30px;
+  width: 18px;
+  height: 30px;
+}
 .button.huge {
   display: inline-block;
   padding: 8px 25px 14px;
@@ -123,7 +138,7 @@ input[type=tel] {
 }
 .page-content {
   display: inline-block;
-  width: 640px;
+  width: 430px;
 }
 .page-content h2 {
   margin-top: 50px;
@@ -519,10 +534,6 @@ input[type=tel] {
 .home-page .why-use-section .why-use-market .market-icon.buyer-plan {
   width: 34px;
   height: 34px;
-}
-.home-page .why-use-section .discover-cta {
-  padding: 0px 15px 15px 15px;
-  font-size: 10pt;
 }
 .home-page .why-use-section .discover-cta:after {
   margin-left: 29px;
