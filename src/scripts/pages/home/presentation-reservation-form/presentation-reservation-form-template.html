@@ -1,24 +1,95 @@
 <div class="presentation-reservation-form">
-  <form name="presentationReservationForm" ng-submit="vm.submitForm()">
+  <form
+    name="reservationForm"
+    ng-submit="vm.validateForm(reservationForm) && vm.submitForm()"
+    novalidate
+  >
 
-    <div class="name-part first-name">
+    <div
+      class="name-part first-name-wrapper"
+      ng-class="{ 'error' : !vm.isFieldValid(reservationForm.firstName) }"
+    >
       <label for="firstName">Prénom</label>
-      <input type="text" name="firstName" id="firstName">
+      <input
+        id="firstName"
+        name="firstName"
+        type="text"
+        ng-model="vm.formModel.firstName"
+        required
+      >
     </div>
-    <div class="name-part">
-      <label for="firstName">Nom</label>
-      <input type="text" name="lastName" id="lastName">
+    <div
+      class="name-part last-name-wrapper"
+      ng-class="{ 'error' : !vm.isFieldValid(reservationForm.lastName) }"
+    >
+      <label for="lastName">Nom</label>
+      <input
+        id="lastName"
+        name="lastName"
+        type="text"
+        ng-model="vm.formModel.lastName"
+        required
+      >
     </div>
 
-    <label for="firstName">Courriel</label>
-    <input type="email" name="email" id="email">
+    <div
+      class="email-wrapper"
+      ng-class="{ 'error' : !vm.isFieldValid(reservationForm.email) }"
+    >
+      <label for="email">Courriel</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        ng-model="vm.formModel.email"
+        required
+      >
+    </div>
 
-    <label for="firstName">Téléphone</label>
-    <input type="tel" name="phone" id="phone">
+    <div
+      class="phone-wrapper"
+      ng-class="{ 'error' : !vm.isFieldValid(reservationForm.phone) }"
+    >
+      <label for="phone">Téléphone</label>
+      <input
+        id="phone"
+        name="phone"
+        type="tel"
+        ng-model="vm.formModel.phone"
+        required
+      >
+    </div>
 
-    <label for="firstName">Nom de votre agence</label>
-    <input type="text" name="agencyName" id="agencyName">
+    <div
+      class="agency-name-wrapper"
+      ng-class="{ 'error' : !vm.isFieldValid(reservationForm.agencyName) }"
+    >
+      <label for="agencyName">Nom de votre agence</label>
+      <input
+        id="agencyName"
+        name="agencyName"
+        type="text"
+        ng-model="vm.formModel.agencyName"
+        ng-disabled="vm.isServicePending"
+        required
+      >
+    </div>
 
-    <button type="submit" class="button">Réserver</button>
+    <button type="submit" class="button submit-button">Réserver</button>
+
+    <div
+      class="form-message please-fix"
+      ng-show="vm.isErrorMessageVisible(reservationForm)"
+    >Oups&nbsp;! Une erreur s’est glissée dans vos réponses. Veuillez corriger les cases en rouge et soumettez votre réservation à nouveau. Merci.</div>
+
+    <div
+      class="form-message response error"
+      ng-show="vm.isServiceErrorVisible"
+    >Oups&nbsp;! Un problème technique nous a empêché de soumettre votre requête. Veuillez tenter à nouveau.</div>
+
+    <div
+      class="form-message response success"
+      ng-show="vm.isServiceSuccessVisible"
+    >Merci&nbsp;! Nous avons reçu votre requête, nous vous contacterons sous peu.</div>
   </form>
 </div>

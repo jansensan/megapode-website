@@ -6,9 +6,25 @@
   color: @white;
   .dropShadow();
 
+  label {
+    margin-bottom: 5px;
+  }
+
   input {
+    margin-bottom: 15px;
     border: none;
     width: 290px;
+  }
+
+  .error {
+
+    label {
+      color: @errorColor;
+    }
+    input {
+      border: 1px solid @errorColor;
+      background-color: @errorBGColor;
+    }
   }
 
   .name-part {
@@ -16,8 +32,37 @@
     input {
       width: 220px;
     }
-    &.first-name { 
+    &.first-name-wrapper { 
       margin-right: 5px;
+    }
+  }
+
+  .submit-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .form-message {
+    display: block;
+    position: relative;
+    font-size: 10pt;
+    color: @errorColor;
+
+    &.please-fix{
+      display: inline-block;
+      top: 15px;
+      width: 300px;
+      margin-left: 20px;
+    }
+
+    &.response {
+      margin-top: 15px;
+    }
+
+    &.success {
+      color: @white;
     }
   }
 }

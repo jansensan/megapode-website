@@ -4,6 +4,7 @@
 
   angular
     .module('mp.components.PresentationReservationForm', [
+      'mp.models.PresentationReservationModel',
       'mp.resources.Templates'
     ])
     .directive('mpPresentationReservationForm', Directive);
@@ -18,13 +19,55 @@
     };
   }
 
-  function Controller() {
+  function Controller(presentationReservationModel) {
     var vm = this;
-    vm.submitForm = submitForm;
+    // properties
+    vm.model = presentationReservationModel;
+    vm.formModel = presentationReservationModel.formModel;
+    vm.isServicePending = false;
+    vm.isServiceErrorVisible = false;
+    vm.isServiceSuccessVisible = false;
+    // methods
+    vm.isErrorMessageVisible = isErrorMessageVisible;
+    vm.isFieldValid = presentationReservationModel.isFieldValid;
+    vm.submitForm = presentationReservationModel.submitForm;
+    vm.validateForm = presentationReservationModel.validateForm;
 
-    function submitForm() {
-      console.log('submitForm');
+    // auto activation
+    activate();
+
+    // methods definitions
+    function isErrorMessageVisible(form) {
+      return presentationReservationModel.hasFormBeenSubmitted() && !form.$valid;
+    }
+
+    // private methods definitions
+    function activate() {
+      presentationReservationModel.stateChanged.add(onModelStateChanged);
+    }
+
+    function onModelStateChanged(signal) {
+      switch (signal.state) {
+        case 'pending':
+          vm.isServicePending = true;
+          vm.isServiceErrorVisible = false;
+          vm.isServiceSuccessVisible = false;
+          break;
+        case 'success':
+          vm.isServicePending = false;
+          vm.isServiceErrorVisible = false;
+          vm.isServiceSuccessVisible = true;
+          break;
+        case 'error':
+          vm.isServicePending = false;
+          vm.isServiceSuccessVisible = false;
+          vm.isServiceErrorVisible = true;
+          break;
+        case 'idle':
+          break;
+      }
     }
   }
+  Controller.$inject = ['presentationReservationModel'];
 
 })();
