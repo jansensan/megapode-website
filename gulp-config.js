@@ -112,6 +112,12 @@ module.exports = function () {
     lint: {
       src: srcDir + '**/*.js'
     },
+    replace: {
+      prodDevToggle: {
+        src: themeDir + 'functions.php',
+        dest: themeDir
+      }
+    },
     styles: {
       src: {
         homePage: srcDir + 'styles/site/home-page.less',

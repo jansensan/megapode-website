@@ -39,6 +39,8 @@ function dev() {
     'build:comment-utiliser-page:dev',
     // deploy to theme directory
     'copy:scripts:dev',
+    // ensure wp functions.php is set as dev
+    'replace:set-as-dev',
     // watch files
     'watch:src'
   );
@@ -70,6 +72,8 @@ function build() {
     'build:bonjour-page',
     'build:regions-dispo-page',
     'build:comment-utiliser-page',
+    // ensure wp functions.php is set as dev
+    'replace:set-as-prod',
     // clean after yourself
     'clean:dev-dir'
   );
