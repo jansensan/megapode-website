@@ -150,34 +150,11 @@ input[type=tel] {
 .download-cta {
   position: relative;
 }
-.download-cta .download-button {
-  display: inline-block;
-  padding: 9px 10px 12px 10px;
-  border: 0;
-  background-color: #287ff5;
-  font-family: 'Roboto', sans-serif;
-  font-size: 12pt;
-  font-weight: 700;
-  text-decoration: none;
-  line-height: 1;
-  letter-spacing: 0.25pt;
-  color: #fafafa;
-}
-.download-cta .download-button .apple-icon {
-  position: relative;
-  display: inline-block;
-  top: 2px;
-  margin-left: 6px;
-  width: 15px;
-  height: 18px;
-  background-image: url('/wp-content/themes/megapode-website-w17/static/images/apple-logo.png');
-  background-repeat: no-repeat;
-}
 .download-cta .devices-icons {
-  position: absolute;
-  top: -1px;
-  left: 158px;
-  width: 72px;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  width: 62px;
   height: 42px;
 }
 .download-cta .devices-icons.dark {
@@ -185,6 +162,42 @@ input[type=tel] {
 }
 .download-cta .devices-icons.light {
   background-image: url('/wp-content/themes/megapode-website-w17/static/images/download-cta-devices-light.png');
+}
+.download-cta .download-label {
+  display: inline-block;
+  position: relative;
+  top: -4px;
+  margin: 0 5px 0 15px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12pt;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 1;
+  letter-spacing: 0.25pt;
+}
+.download-cta .download-label.dark {
+  color: #262322;
+}
+.download-cta .download-label.light {
+  color: #fafafa;
+}
+.download-cta .download-button {
+  display: inline-block;
+  position: relative;
+  margin: 1px 0;
+  width: 17px;
+  height: 20px;
+  padding: 10px 20px;
+  border: 0;
+  background-color: #287ff5;
+}
+.download-cta .download-button svg {
+  width: 17px;
+  height: 20px;
+  fill: #fafafa;
+}
+.download-cta .download-button.android {
+  margin-left: -2px;
 }
 .main-menu {
   position: fixed;

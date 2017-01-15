@@ -150,34 +150,11 @@ input[type=tel] {
 .download-cta {
   position: relative;
 }
-.download-cta .download-button {
-  display: inline-block;
-  padding: 9px 10px 12px 10px;
-  border: 0;
-  background-color: #287ff5;
-  font-family: 'Roboto', sans-serif;
-  font-size: 12pt;
-  font-weight: 700;
-  text-decoration: none;
-  line-height: 1;
-  letter-spacing: 0.25pt;
-  color: #fafafa;
-}
-.download-cta .download-button .apple-icon {
-  position: relative;
-  display: inline-block;
-  top: 2px;
-  margin-left: 6px;
-  width: 15px;
-  height: 18px;
-  background-image: url('/wp-content/themes/megapode-website-w17/static/images/apple-logo.png');
-  background-repeat: no-repeat;
-}
 .download-cta .devices-icons {
-  position: absolute;
-  top: -1px;
-  left: 158px;
-  width: 72px;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  width: 62px;
   height: 42px;
 }
 .download-cta .devices-icons.dark {
@@ -185,6 +162,42 @@ input[type=tel] {
 }
 .download-cta .devices-icons.light {
   background-image: url('/wp-content/themes/megapode-website-w17/static/images/download-cta-devices-light.png');
+}
+.download-cta .download-label {
+  display: inline-block;
+  position: relative;
+  top: -4px;
+  margin: 0 5px 0 15px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12pt;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 1;
+  letter-spacing: 0.25pt;
+}
+.download-cta .download-label.dark {
+  color: #262322;
+}
+.download-cta .download-label.light {
+  color: #fafafa;
+}
+.download-cta .download-button {
+  display: inline-block;
+  position: relative;
+  margin: 1px 0;
+  width: 17px;
+  height: 20px;
+  padding: 10px 20px;
+  border: 0;
+  background-color: #287ff5;
+}
+.download-cta .download-button svg {
+  width: 17px;
+  height: 20px;
+  fill: #fafafa;
+}
+.download-cta .download-button.android {
+  margin-left: -2px;
 }
 .main-menu {
   position: fixed;
@@ -390,7 +403,7 @@ input[type=tel] {
 }
 .home-banner .download-cta-container {
   position: relative;
-  left: 72px;
+  left: 4px;
   top: -6px;
 }
 .home-banner .selling-points {
@@ -420,9 +433,20 @@ input[type=tel] {
   -moz-box-shadow: 0px 1px 3px 2px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 1px 3px 2px rgba(0, 0, 0, 0.15);
 }
+.presentation-reservation-form label {
+  margin-bottom: 5px;
+}
 .presentation-reservation-form input {
+  margin-bottom: 15px;
   border: none;
   width: 290px;
+}
+.presentation-reservation-form .error label {
+  color: #c70000;
+}
+.presentation-reservation-form .error input {
+  border: 1px solid #c70000;
+  background-color: #ffd6d6;
 }
 .presentation-reservation-form .name-part {
   display: inline-block;
@@ -430,8 +454,81 @@ input[type=tel] {
 .presentation-reservation-form .name-part input {
   width: 220px;
 }
-.presentation-reservation-form .name-part.first-name {
+.presentation-reservation-form .name-part.first-name-wrapper {
   margin-right: 5px;
+}
+.presentation-reservation-form .submit-button {
+  display: inline-block;
+  margin-top: 25px;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+.presentation-reservation-form .form-message {
+  display: block;
+  position: relative;
+  font-size: 10pt;
+  color: #c70000;
+}
+.presentation-reservation-form .form-message.please-fix {
+  display: inline-block;
+  top: 15px;
+  width: 300px;
+  margin-left: 20px;
+}
+.presentation-reservation-form .form-message.response {
+  margin-top: 15px;
+}
+.presentation-reservation-form .success-response {
+  color: #fafafa;
+}
+.presentation-reservation-form .success-response h2 {
+  margin: 20px 0 15px;
+  font-size: 13pt;
+  line-height: 1;
+}
+.presentation-reservation-form .success-response svg {
+  fill: #fafafa;
+}
+.presentation-reservation-form .success-response .follow-up-header {
+  margin-bottom: 60px;
+}
+.presentation-reservation-form .success-response .follow-up-subheading {
+  font-size: 10pt;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+.presentation-reservation-form .success-response .follow-up-column {
+  display: inline-block;
+  width: 50%;
+}
+.presentation-reservation-form .success-response .follow-up-icon.icon-letter-sent svg {
+  width: 78px;
+  height: 29px;
+}
+.presentation-reservation-form .success-response .follow-up-icon.icon-phone svg {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 15px;
+}
+.presentation-reservation-form .success-response .follow-up-icon.icon-letter svg {
+  width: 45px;
+  height: 40px;
+  vertical-align: bottom;
+  margin-bottom: 15px;
+}
+.presentation-reservation-form .success-response .follow-up-link {
+  padding: 0;
+  margin: 0;
+  color: #fafafa;
+  font-size: 13pt;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.presentation-reservation-form .success-response .follow-up-link:hover {
+  text-decoration: underline;
 }
 .home-page p {
   margin-top: 0.5em;
