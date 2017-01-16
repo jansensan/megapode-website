@@ -1,39 +1,41 @@
 <div class="contact-form">
   <form
     name="contactForm"
-    ng-submit=""
+    ng-submit="vm.validateForm(contactForm) && vm.submitForm()"
     novalidate
   >
-    <div
-      class="name-part first-name-wrapper"
-      ng-class="{ 'error' : !vm.isFieldValid(reservationForm.firstName) }"
-    >
-      <label for="firstName">Prénom</label>
-      <input
-        id="firstName"
-        name="firstName"
-        type="text"
-        ng-model="vm.formModel.firstName"
-        required
+    <div class="form-row">
+      <div
+        class="name-part first-name-wrapper"
+        ng-class="{ 'error' : !vm.isFieldValid(contactForm.firstName) }"
       >
-    </div>
-    <div
-      class="name-part last-name-wrapper"
-      ng-class="{ 'error' : !vm.isFieldValid(reservationForm.lastName) }"
-    >
-      <label for="lastName">Nom</label>
-      <input
-        id="lastName"
-        name="lastName"
-        type="text"
-        ng-model="vm.formModel.lastName"
-        required
+        <label for="firstName">Prénom</label>
+        <input
+          id="firstName"
+          name="firstName"
+          type="text"
+          ng-model="vm.formModel.firstName"
+          required
+        >
+      </div>
+      <div
+        class="name-part last-name-wrapper"
+        ng-class="{ 'error' : !vm.isFieldValid(contactForm.lastName) }"
       >
+        <label for="lastName">Nom</label>
+        <input
+          id="lastName"
+          name="lastName"
+          type="text"
+          ng-model="vm.formModel.lastName"
+          required
+        >
+      </div>
     </div>
 
     <div
-      class="email-wrapper"
-      ng-class="{ 'error' : !vm.isFieldValid(reservationForm.email) }"
+      class="form-row email-wrapper"
+      ng-class="{ 'error' : !vm.isFieldValid(contactForm.email) }"
     >
       <label for="email">Courriel</label>
       <input
@@ -46,8 +48,8 @@
     </div>
 
     <div
-      class="phone-wrapper"
-      ng-class="{ 'error' : !vm.isFieldValid(reservationForm.phone) }"
+      class="form-row phone-wrapper"
+      ng-class="{ 'error' : !vm.isFieldValid(contactForm.phone) }"
     >
       <label for="phone">Téléphone</label>
       <input
@@ -55,15 +57,14 @@
         name="phone"
         type="tel"
         ng-model="vm.formModel.phone"
-        required
       >
     </div>
 
     <div
-      class="message-wrapper"
-      ng-class="{ 'error' : !vm.isFieldValid(reservationForm.messageText) }"
+      class="form-row message-wrapper"
+      ng-class="{ 'error' : !vm.isFieldValid(contactForm.messageText) }"
     >
-      <label for="messageText">Nom de votre agence</label>
+      <label for="messageText">Votre message</label>
       <textarea
         id="messageText"
         name="messageText"
@@ -73,6 +74,31 @@
       ></textarea>
     </div>
 
-    <button type="submit" class="button submit-button">Réserver</button>
+    <div class="form-row submit-wrapper">
+      <button
+        type="submit"
+        class="button submit-button"
+        ng-disabled="vm.isServicePending"
+      >Envoyer</button>
+
+      <div
+        class="form-message please-fix"
+        ng-show="vm.isErrorMessageVisible(contactForm)"
+        ng-cloak
+      >Oups&nbsp;! Une erreur s’est glissée dans vos réponses. Veuillez corriger les cases en rouge et veuillez envoyer votre message à nouveau. Merci.</div>
+
+      <p
+        class="form-message response"
+        ng-show="vm.isServiceSuccessVisible"
+        ng-cloak
+      >Votre courriel a bien été reçu. Nous vous contacterons dans les plus brefs délais.</p>
+
+      <p
+        class="form-message response error"
+        ng-show="vm.isServiceErrorVisible"
+        ng-cloak
+      >Oups&nbsp;! Un problème technique nous a empêché de soumettre votre requête. Veuillez tenter à nouveau.</p>
+    </div>
+
   </form>
 </div>

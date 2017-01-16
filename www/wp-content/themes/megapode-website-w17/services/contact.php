@@ -9,7 +9,7 @@
   $lastName = $_POST["lastName"];
   $email = $_POST["email"];
   $phone = $_POST["phone"];
-  $agencyName = $_POST["agencyName"];
+  $messageText = $_POST["messageText"];
 
   // build email header
   $headers = "From: " . HEADER_FROM . "\r\n";
@@ -27,7 +27,7 @@
   $body .= "<p>last name: " . $lastName . "</p>";
   $body .= "<p>email: " . $email . "</p>";
   $body .= "<p>phone: " . $phone . "</p>";
-  $body .= "<p>agency name: " . $agencyName . "</p>";
+  $body .= "<p>message text: " . $messageText . "</p>";
   $body .= "</html>";
 
   // send email

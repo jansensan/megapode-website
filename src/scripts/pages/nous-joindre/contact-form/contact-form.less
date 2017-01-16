@@ -17,4 +17,47 @@
       margin-right: 5px;
     }
   }
+
+  .submit-button {
+    margin-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .error {
+    label {
+      color: @errorColor;
+    }
+    input,
+    textarea {
+      border: 1px solid @errorColor;
+      background-color: @errorBGColor;
+    }
+  }
+
+  .form-message {
+    display: block;
+    position: relative;
+    font-size: 10pt;
+    color: @errorColor;
+
+    &.please-fix {
+      position: absolute;
+      display: inline-block;
+      top: 4px;
+      margin-left: 20px;
+      width: 305px;
+    }
+
+    &.response {
+      margin-top: 15px;
+      font-size: 10pt;
+      letter-spacing: -0.2pt;
+      color: @black;
+
+      &.error {
+        color: @errorColor;
+      }
+    }
+  }
 }

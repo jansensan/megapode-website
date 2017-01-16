@@ -71,21 +71,25 @@
         name="agencyName"
         type="text"
         ng-model="vm.formModel.agencyName"
-        ng-disabled="vm.isServicePending"
         required
       >
     </div>
 
-    <button type="submit" class="button submit-button">Réserver</button>
+    <button
+      type="submit"
+      class="button submit-button"
+      ng-disabled="vm.isServicePending"
+    >Réserver</button>
 
     <div
       class="form-message please-fix"
       ng-show="vm.isErrorMessageVisible(reservationForm)"
-    >Oups&nbsp;! Une erreur s’est glissée dans vos réponses. Veuillez corriger les cases en rouge et soumettez votre réservation à nouveau. Merci.</div>
+    >Oups&nbsp;! Une erreur s’est glissée dans vos réponses. Veuillez corriger les cases en rouge et veuillez soumettre votre réservation à nouveau. Merci.</div>
 
     <div
       class="form-message response error"
       ng-show="vm.isServiceErrorVisible"
+      ng-cloak
     >Oups&nbsp;! Un problème technique nous a empêché de soumettre votre requête. Veuillez tenter à nouveau.</div>
   </form>
 

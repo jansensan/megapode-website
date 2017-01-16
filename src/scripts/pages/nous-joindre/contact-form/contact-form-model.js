@@ -4,9 +4,13 @@
 
   angular
     .module('mp.models.ContactFormModel', [])
-    .factory('contactForm', ContactForm);
+    .factory('contactFormModel', ContactFormModel);
 
-  function ContactForm() {
+  function ContactFormModel($http) {
+    // vars
+    var _hasFormBeenSubmitted = false;
+    var _state = 'idle';
+
     // public api
     var _model = {
       // properties
@@ -17,16 +21,67 @@
         phone: '',
         message: ''
       },
+      // signals
+      stateChanged: new signals.Signal(),
       // methods
-      submitForm: submitForm
+      hasFormBeenSubmitted: hasFormBeenSubmitted,
+      isFieldValid: isFieldValid,
+      submitForm: submitForm,
+      validateForm: validateForm
     };
     return _model;
 
     // methods definitions
-    function submitForm() {
+    function hasFormBeenSubmitted() {
+      return _hasFormBeenSubmitted;
+    }
 
+    function isFieldValid(field) {
+      var isValid;
+      if (!_hasFormBeenSubmitted) {
+        isValid = true;
+      } else {
+        isValid = field.$valid;
+      }
+      return isValid;
+    }
+
+    function submitForm() {
+      setState('pending');
+
+      var url = 'wp-content/themes/megapode-website-w17/services/contact.php';
+      var data = _model.formModel;
+      var config = {
+        headers : {
+          'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
+        }
+      };
+      $http.post(url, data, config)
+        .then(
+          function onSubmitted() {
+            setState('success');
+            setState('idle');
+          }, 
+          function onFailedToSubmit() {
+            setState('error');
+            setState('idle');
+          }
+        );
+    }
+
+    function validateForm(form) {
+      _hasFormBeenSubmitted = true;
+      return form.$valid;
+    }
+
+    // private methods definitions
+    function setState(value) {
+      _state = value;
+      _model.stateChanged.dispatch({
+        state: _state
+      });
     }
   }
-  // ContactForm.$inject = ['$http'];
+  ContactFormModel.$inject = ['$http'];
 
 })();

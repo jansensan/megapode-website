@@ -24,7 +24,6 @@
       // signals
       stateChanged: new signals.Signal(),
       // methods
-      getState: getState,
       hasFormBeenSubmitted: hasFormBeenSubmitted,
       isFieldValid: isFieldValid,
       submitForm: submitForm,
@@ -33,10 +32,6 @@
     return _model;
 
     // methods definitions
-    function getState() {
-      return _state;
-    }
-
     function hasFormBeenSubmitted() {
       return _hasFormBeenSubmitted;
     }
