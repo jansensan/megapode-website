@@ -27,18 +27,14 @@
       </section>
 
       <section class="page-content bonjour-page">
-        <h2><a id="mission"></a>Notre mission</h2>
-        <p class="subheading">Megapode est une application conçu pour améliorer les transactions immobilières.</p>
-        <p>Nous produisons des plans de propriétés sur mesure, des photos HDR et offrons des outils de big data. Nos outils donnent un accès instantané à plusieurs informations pertinentes pour les acheteurs tel que l'ensoleillement, l'accessibilité des transports en commun, les écoles ou les parcs, les épiceries, etc.</p>
-        <p>Megapode offre également des outils pour les propriétaires de maisons afin d’aider à la décoration, la rénovation et le déménagement en cataloguant toutes les dimensions et surfaces de la propriété de façon conviviale.</p>
-        <p>Téléchargez Megapode dès maintenant si vous êtes un courtier, un acheteur ou si vous souhaitez rénover ou redécorer.</p>
+        <?php 
+          while(have_posts()) {
+            the_post();
+            the_content();
+          }
+        ?>
 
-        <h2><a id="histoire"></a>Notre histoire</h2>
-        <p class="subheading">Le courtage immobilier se trouve aujourd’hui à la croisée des chemins, la technologie transforme les comportements de magasinage du grand public.</p>
-        <p>Dans ce contexte, nous cherchions à offrir un outil qui soit facile à utiliser et véritablement utile pour les clients. Nous avons donc allié nos connaissances du courtage immobilier, de l’informatique et du marketing pour créer Megapode.</p>
-        <p>Dans un premier temps, nous sommes parvenus à produire pour chaque propriété un plan architectural détaillé mais facile à comprendre. À ce plan, nous avons ajouté les informations les plus utiles pour un éventuel acheteur, telles que l’emplacement des plinthes électriques, les dimensions des fenêtres, la taille de l’alcôve du réfrigérateur et l’ensoleillement. Par la suite, nous nous sommes tournés vers le futur et nous avons bâti une suite de données futées de type big data offerte exclusivement aux courtiers pour les aider à comprendre le mode de vie du quartier.</p>
-
-        <h2><a id="leadership"></a>Notre leadership</h2>
+        <h2><a name="leadership" id="leadership"></a>Notre leadership</h2>
 
         <div class="leaders-container">
           <div class="leader">

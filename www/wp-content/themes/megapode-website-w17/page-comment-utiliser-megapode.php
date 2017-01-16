@@ -27,15 +27,21 @@
       </section>
 
       <section class="page-content">
-        <h2>Aperçu d'un plan Megapode</h2>
-        <p class="subheading">Notre plan est un un résumé des informations les plus pertientes.</p>
-        <p>Le plan Megapode donne accès à plusieurs informations pertinentes pour les acheteurs, les vendeurs et les courtiers.</p>
+        <?php 
+          while(have_posts()) {
+            the_post();
+            the_content();
+          }
+        ?>
+
+        <!-- TODO: improve -->
         <p>
           <img
             src="<?php echo IMG_DIR; ?>comment-utiliser-fpo.png"
             alt="Instructions à venir concernant l'utilisation de Mégapode"
           >
         </p>
+
       </section>
     </div>
 
