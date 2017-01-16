@@ -36,25 +36,34 @@
         height: 161px;
         overflow: hidden;
       }
+
       .map-cta {
-        margin-top: 28px;
-        width: 248px;
-        height: 136px;
-        padding: 15px 15px 10px 15px;
+        width: 100%;
+        height: 100%;
+        padding: 5px;
         &:after {
           float: right;
-          top: 0;
+          top: -35px;
+          right: 15px;
+        }
+        .map-cta-bg {
+          padding: 10px;
+          width: 248px;
+          height: 131px;
+          background-color: @white;
         }
         .line1 {
           display: block;
+          margin-bottom: 15px; 
           font-size: 10pt;
           line-height: 1.5;
-          margin-bottom: 5px;
+          letter-spacing: -0.275pt;
         }
         .line2 {
           display: block;
           font-size: 8pt;
           line-height: 1.5;
+          letter-spacing: -0.2pt;
         }
       }
     }

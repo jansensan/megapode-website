@@ -81,11 +81,16 @@
               >
             </div>
           </div>
-          <div class="map cta">
-            <a href="#" class="button medium map-cta">
-              <span class="line1">Faites-nous part de votre intérêt afin de guider notre expansion à travers le Québec.</span>
-              <span class="line2">Nous prenons de l’expansion sans cesse en suivant la demande, faites-nous par de votre intérêt en réservant une présentation pour votre agence.</span>
-            </a>
+          <div class="map your-region">
+            <div class="map-name">Votre région</div>
+            <div class="map-image">
+              <a href="#" class="button medium map-cta">
+                <div class="map-cta-bg">
+                  <span class="line1">Faites-nous part de votre intérêt afin de guider notre expansion à travers le Québec.</span>
+                  <span class="line2">Nous prenons de l’expansion sans cesse en suivant la demande, faites-nous par de votre intérêt en réservant une présentation pour votre agence.</span>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </section>
