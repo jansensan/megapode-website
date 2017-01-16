@@ -1,0 +1,78 @@
+<div class="contact-form">
+  <form
+    name="contactForm"
+    ng-submit=""
+    novalidate
+  >
+    <div
+      class="name-part first-name-wrapper"
+      ng-class="{ 'error' : !vm.isFieldValid(reservationForm.firstName) }"
+    >
+      <label for="firstName">Prénom</label>
+      <input
+        id="firstName"
+        name="firstName"
+        type="text"
+        ng-model="vm.formModel.firstName"
+        required
+      >
+    </div>
+    <div
+      class="name-part last-name-wrapper"
+      ng-class="{ 'error' : !vm.isFieldValid(reservationForm.lastName) }"
+    >
+      <label for="lastName">Nom</label>
+      <input
+        id="lastName"
+        name="lastName"
+        type="text"
+        ng-model="vm.formModel.lastName"
+        required
+      >
+    </div>
+
+    <div
+      class="email-wrapper"
+      ng-class="{ 'error' : !vm.isFieldValid(reservationForm.email) }"
+    >
+      <label for="email">Courriel</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        ng-model="vm.formModel.email"
+        required
+      >
+    </div>
+
+    <div
+      class="phone-wrapper"
+      ng-class="{ 'error' : !vm.isFieldValid(reservationForm.phone) }"
+    >
+      <label for="phone">Téléphone</label>
+      <input
+        id="phone"
+        name="phone"
+        type="tel"
+        ng-model="vm.formModel.phone"
+        required
+      >
+    </div>
+
+    <div
+      class="message-wrapper"
+      ng-class="{ 'error' : !vm.isFieldValid(reservationForm.messageText) }"
+    >
+      <label for="messageText">Nom de votre agence</label>
+      <textarea
+        id="messageText"
+        name="messageText"
+        rows="8" cols="16"
+        ng-model="vm.formModel.messageText"
+        required
+      ></textarea>
+    </div>
+
+    <button type="submit" class="button submit-button">Réserver</button>
+  </form>
+</div>

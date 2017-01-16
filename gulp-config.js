@@ -35,6 +35,10 @@ module.exports = function () {
       commentUtiliser: [
         globalComponents,
         srcScriptDir + 'pages/comment-utiliser/**/*.js'
+      ],
+      nousJoindre: [
+        globalComponents,
+        srcScriptDir + 'pages/nous-joindre/**/*.js'
       ]
     },
     vendors: [
@@ -76,6 +80,13 @@ module.exports = function () {
               devScriptDir + templatesFileName,
               devScriptDir + 'comment-utiliser-page.js'
             ]
+          },
+          nousJoindre: {
+            dev: scripts.app.nousJoindre,
+            prod: [
+              devScriptDir + templatesFileName,
+              devScriptDir + 'nous-joindre-page.js'
+            ]
           }
         },
         vendors: scripts.vendors
@@ -101,7 +112,8 @@ module.exports = function () {
           devScriptDir + 'home-page.js',
           devScriptDir + 'bonjour-page.js',
           devScriptDir + 'regions-dispo-page.js',
-          devScriptDir + 'comment-utiliser-page.js'
+          devScriptDir + 'comment-utiliser-page.js',
+          devScriptDir + 'nous-joindre-page.js'
         ]
       },
       dest: {
@@ -123,7 +135,8 @@ module.exports = function () {
         homePage: srcDir + 'styles/site/home-page.less',
         bonjourPage: srcDir + 'styles/site/bonjour-page.less',
         regionsDisposPage: srcDir + 'styles/site/regions-dispo-page.less',
-        commentUtiliserPage: srcDir + 'styles/site/comment-utiliser-page.less'
+        commentUtiliserPage: srcDir + 'styles/site/comment-utiliser-page.less',
+        nousJoindrePage: srcDir + 'styles/site/nous-joindre-page.less'
       },
       dest: themeStylesDir
     },

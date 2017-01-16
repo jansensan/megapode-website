@@ -1,0 +1,58 @@
+// megapode
+@import "../megapode";
+
+// components
+@import "../common/components";
+@import "../../scripts/pages/nous-joindre/contact-form/contact-form";
+
+
+.nous-joindre-page {
+  .page-content {
+    width: 460px;
+  }
+  .contact-details-row {
+    padding-bottom: 60px;
+
+    &:last-child {
+      padding-bottom: 0px;
+    }
+
+    h2 {
+      margin: 0;
+    }
+  }
+  .contact-details-column {
+    display: inline-block;
+    width: 226px;
+  }
+  .contact-link-icon {
+    fill: @black;
+    margin-bottom: 15px;
+
+    &.icon-phone {
+      width: 40px;
+      height: 40px;
+    }
+    &.icon-letter-sent {
+      width: 45px;
+      height: 29px;
+    }
+  }
+  .contact-link {
+    color: @black;
+    font-size: 13pt;
+    font-weight: @fwBold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .contact-logo {
+    display: inline-block;
+    margin: 25px 25px 0 0;
+    width: 35px;
+    height: 35px;
+  }
+}

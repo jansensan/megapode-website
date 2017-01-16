@@ -29,6 +29,7 @@ function dev() {
     'styles:bonjour-page:dev',
     'styles:regions-dispo-page:dev',
     'styles:comment-utiliser-page:dev',
+    'styles:nous-joindre-page:dev',
     'copy:vendor-styles:dev',
     // scripts
     'template-cache:dev',
@@ -37,6 +38,7 @@ function dev() {
     'build:bonjour-page:dev',
     'build:regions-dispo-page:dev',
     'build:comment-utiliser-page:dev',
+    'build:nous-joindre-page:dev',
     // deploy to theme directory
     'copy:scripts:dev',
     // ensure wp functions.php is set as dev
@@ -58,6 +60,7 @@ function build() {
     'styles:bonjour-page:dev',
     'styles:regions-dispo-page:dev',
     'styles:comment-utiliser-page:dev',
+    'styles:nous-joindre-page:dev',
     'copy:vendor-styles:dev',
     // scripts
     'template-cache:dev',
@@ -66,12 +69,14 @@ function build() {
     'build:bonjour-page:dev',
     'build:regions-dispo-page:dev',
     'build:comment-utiliser-page:dev',
+    'build:nous-joindre-page:dev',
     // deploy to theme directory
     'build:vendors',
     'build:home-page',
     'build:bonjour-page',
     'build:regions-dispo-page',
     'build:comment-utiliser-page',
+    'build:nous-joindre-page',
     // ensure wp functions.php is set as dev
     'replace:set-as-prod',
     // clean after yourself

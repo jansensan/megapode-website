@@ -12,6 +12,8 @@ gulp.task('build:regions-dispo-page:dev', buildDevRegionsDispoPage);
 gulp.task('build:regions-dispo-page', buildRegionsDispoPage);
 gulp.task('build:comment-utiliser-page:dev', buildDevCommentUtiliserPage);
 gulp.task('build:comment-utiliser-page', buildCommentUtiliserPage);
+gulp.task('build:nous-joindre-page:dev', buildDevNousJoindrePage);
+gulp.task('build:nous-joindre-page', buildNousJoindrePage);
 gulp.task('build:vendors:dev', buildDevVendors);
 gulp.task('build:vendors', buildVendors);
 
@@ -91,6 +93,26 @@ function buildCommentUtiliserPage() {
     .src(config.src.app.commentUtiliser.prod)
     // concat files
     .pipe(glp.concat('comment-utiliser-page.min.js'))
+    // minify
+    .pipe(glp.uglify())
+    // output file
+    .pipe(gulp.dest(config.dest.prod));
+}
+
+function buildDevNousJoindrePage() {
+  return gulp
+    .src(config.src.app.nousJoindre.dev)
+    // concat files
+    .pipe(glp.concat('nous-joindre-page.js'))
+    // output file
+    .pipe(gulp.dest(config.dest.dev));
+}
+
+function buildNousJoindrePage() {
+  return gulp
+    .src(config.src.app.nousJoindre.prod)
+    // concat files
+    .pipe(glp.concat('nous-joindre-page.min.js'))
     // minify
     .pipe(glp.uglify())
     // output file
