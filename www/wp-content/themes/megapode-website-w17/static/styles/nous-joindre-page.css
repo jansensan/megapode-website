@@ -145,6 +145,10 @@ textarea {
 .page-content h2 {
   margin-top: 50px;
 }
+.form-row {
+  display: block;
+  position: relative;
+}
 .logo {
   width: 305px;
   height: 57px;
@@ -381,6 +385,41 @@ textarea {
 }
 .contact-form .name-part.first-name-wrapper {
   margin-right: 5px;
+}
+.contact-form .submit-button {
+  margin-top: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.contact-form .error label {
+  color: #c70000;
+}
+.contact-form .error input,
+.contact-form .error textarea {
+  border: 1px solid #c70000;
+  background-color: #ffd6d6;
+}
+.contact-form .form-message {
+  display: block;
+  position: relative;
+  font-size: 10pt;
+  color: #c70000;
+}
+.contact-form .form-message.please-fix {
+  position: absolute;
+  display: inline-block;
+  top: 4px;
+  margin-left: 20px;
+  width: 305px;
+}
+.contact-form .form-message.response {
+  margin-top: 15px;
+  font-size: 10pt;
+  letter-spacing: -0.2pt;
+  color: #262322;
+}
+.contact-form .form-message.response.error {
+  color: #c70000;
 }
 .nous-joindre-page .page-content {
   width: 460px;

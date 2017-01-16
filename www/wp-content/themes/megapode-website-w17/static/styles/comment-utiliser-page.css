@@ -145,6 +145,10 @@ textarea {
 .page-content h2 {
   margin-top: 50px;
 }
+.form-row {
+  display: block;
+  position: relative;
+}
 .logo {
   width: 305px;
   height: 57px;
