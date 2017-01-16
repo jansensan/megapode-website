@@ -2,14 +2,9 @@
   // define constants
   define("HEADER_FROM", "info@megapode.ca");
   define("HEADER_REPLY_TO", "info@megapode.ca");
-  define("RECIPIENT", "mat.jb@jansensan.net");
+  define("RECIPIENT", "daniel@danielfontaine.tv");
 
-  // retrieve data from post
-  $firstName = $_POST["firstName"];
-  $lastName = $_POST["lastName"];
-  $email = $_POST["email"];
-  $phone = $_POST["phone"];
-  $messageText = $_POST["messageText"];
+  // TODO: retrieve data from post
 
   // build email header
   $headers = "From: " . HEADER_FROM . "\r\n";
@@ -19,15 +14,11 @@
   $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
   // build email subject line
-  $subject = "Présentation Mégapode";
+  $subject = "Contact";
 
   // build email body
   $body = "<html>";
-  $body .= "<p>first name: " . $firstName . "</p>";
-  $body .= "<p>last name: " . $lastName . "</p>";
-  $body .= "<p>email: " . $email . "</p>";
-  $body .= "<p>phone: " . $phone . "</p>";
-  $body .= "<p>message text: " . $messageText . "</p>";
+  $body .= "<p>POST raw data: " . print_r($_POST, true) . "</p>";
   $body .= "</html>";
 
   // send email
