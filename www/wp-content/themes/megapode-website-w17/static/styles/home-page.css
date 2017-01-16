@@ -46,14 +46,16 @@ section.dark {
 label {
   display: block;
   font-size: 11pt;
+  margin-bottom: 5px;
 }
 input[type=text],
 input[type=email],
-input[type=tel] {
+input[type=tel],
+textarea {
   display: block;
-  border: 1px solid #262322;
+  margin-bottom: 15px;
+  border: 1px solid #cccccc;
   padding: 5px;
-  margin-bottom: 20px;
   font-size: 10pt;
 }
 .subheading {
@@ -433,11 +435,7 @@ input[type=tel] {
   -moz-box-shadow: 0px 1px 3px 2px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 1px 3px 2px rgba(0, 0, 0, 0.15);
 }
-.presentation-reservation-form label {
-  margin-bottom: 5px;
-}
 .presentation-reservation-form input {
-  margin-bottom: 15px;
   border: none;
   width: 290px;
 }

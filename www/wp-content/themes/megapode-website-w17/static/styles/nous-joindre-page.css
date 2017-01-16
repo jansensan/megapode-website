@@ -364,3 +364,65 @@ textarea {
   list-style: none;
   line-height: 1.5;
 }
+.contact-form {
+  padding-bottom: 60px;
+}
+.contact-form input[type=text],
+.contact-form input[type=email],
+.contact-form input[type=tel],
+.contact-form textarea {
+  width: 448px;
+}
+.contact-form .name-part {
+  display: inline-block;
+}
+.contact-form .name-part input {
+  width: 215px;
+}
+.contact-form .name-part.first-name-wrapper {
+  margin-right: 5px;
+}
+.nous-joindre-page .page-content {
+  width: 460px;
+}
+.nous-joindre-page .contact-details-row {
+  padding-bottom: 60px;
+}
+.nous-joindre-page .contact-details-row:last-child {
+  padding-bottom: 0px;
+}
+.nous-joindre-page .contact-details-row h2 {
+  margin: 0;
+}
+.nous-joindre-page .contact-details-column {
+  display: inline-block;
+  width: 226px;
+}
+.nous-joindre-page .contact-link-icon {
+  fill: #262322;
+  margin-bottom: 15px;
+}
+.nous-joindre-page .contact-link-icon.icon-phone {
+  width: 40px;
+  height: 40px;
+}
+.nous-joindre-page .contact-link-icon.icon-letter-sent {
+  width: 45px;
+  height: 29px;
+}
+.nous-joindre-page .contact-link {
+  color: #262322;
+  font-size: 13pt;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nous-joindre-page .contact-link:hover {
+  text-decoration: underline;
+}
+.nous-joindre-page .contact-logo {
+  display: inline-block;
+  margin: 25px 25px 0 0;
+  width: 35px;
+  height: 35px;
+}
