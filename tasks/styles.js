@@ -9,6 +9,7 @@ gulp.task('styles:bonjour-page:dev', compileDevBonjourPage);
 gulp.task('styles:regions-dispo-page:dev', compileDevRegionsDispoPage);
 gulp.task('styles:comment-utiliser-page:dev', compileDevCommentUtiliserPage);
 gulp.task('styles:nous-joindre-page:dev', compileDevNousJoindrePage);
+gulp.task('styles:megapode-page:dev', compileDevMegapodePage);
 
 
 // methods definitions
@@ -55,6 +56,13 @@ function compileDevCommentUtiliserPage() {
 function compileDevNousJoindrePage() {
   return compileDevStyles(
     config.src.nousJoindrePage,
+    config.dest
+  );
+}
+
+function compileDevMegapodePage() {
+  return compileDevStyles(
+    config.src.megapodePage,
     config.dest
   );
 }

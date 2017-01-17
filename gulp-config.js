@@ -39,6 +39,10 @@ module.exports = function () {
       nousJoindre: [
         globalComponents,
         srcScriptDir + 'pages/nous-joindre/**/*.js'
+      ],
+      megapodePage: [
+        globalComponents,
+        srcScriptDir + 'pages/megapode-page/**/*.js'
       ]
     },
     vendors: [
@@ -87,6 +91,13 @@ module.exports = function () {
               devScriptDir + templatesFileName,
               devScriptDir + 'nous-joindre-page.js'
             ]
+          },
+          megapodePage: {
+            dev: scripts.app.megapodePage,
+            prod: [
+              devScriptDir + templatesFileName,
+              devScriptDir + 'megapode-page.js'
+            ]
           }
         },
         vendors: scripts.vendors
@@ -113,7 +124,8 @@ module.exports = function () {
           devScriptDir + 'bonjour-page.js',
           devScriptDir + 'regions-dispo-page.js',
           devScriptDir + 'comment-utiliser-page.js',
-          devScriptDir + 'nous-joindre-page.js'
+          devScriptDir + 'nous-joindre-page.js',
+          devScriptDir + 'megapode-page.js' // for generic page wp template
         ]
       },
       dest: {
@@ -136,7 +148,8 @@ module.exports = function () {
         bonjourPage: srcDir + 'styles/site/bonjour-page.less',
         regionsDisposPage: srcDir + 'styles/site/regions-dispo-page.less',
         commentUtiliserPage: srcDir + 'styles/site/comment-utiliser-page.less',
-        nousJoindrePage: srcDir + 'styles/site/nous-joindre-page.less'
+        nousJoindrePage: srcDir + 'styles/site/nous-joindre-page.less',
+        megapodePage: srcDir + 'styles/site/megapode-page.less'
       },
       dest: themeStylesDir
     },

@@ -30,6 +30,7 @@ function dev() {
     'styles:regions-dispo-page:dev',
     'styles:comment-utiliser-page:dev',
     'styles:nous-joindre-page:dev',
+    'styles:megapode-page:dev',
     'copy:vendor-styles:dev',
     // scripts
     'template-cache:dev',
@@ -39,6 +40,7 @@ function dev() {
     'build:regions-dispo-page:dev',
     'build:comment-utiliser-page:dev',
     'build:nous-joindre-page:dev',
+    'build:megapode-page:dev',
     // deploy to theme directory
     'copy:scripts:dev',
     // ensure wp functions.php is set as dev
@@ -61,6 +63,7 @@ function build() {
     'styles:regions-dispo-page:dev',
     'styles:comment-utiliser-page:dev',
     'styles:nous-joindre-page:dev',
+    'styles:megapode-page:dev',
     'copy:vendor-styles:dev',
     // scripts
     'template-cache:dev',
@@ -70,6 +73,7 @@ function build() {
     'build:regions-dispo-page:dev',
     'build:comment-utiliser-page:dev',
     'build:nous-joindre-page:dev',
+    'build:megapode-page:dev',
     // deploy to theme directory
     'build:vendors',
     'build:home-page',
@@ -77,6 +81,7 @@ function build() {
     'build:regions-dispo-page',
     'build:comment-utiliser-page',
     'build:nous-joindre-page',
+    'build:megapode-page',
     // ensure wp functions.php is set as dev
     'replace:set-as-prod',
     // clean after yourself
