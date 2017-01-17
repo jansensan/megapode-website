@@ -594,7 +594,7 @@ textarea {
 }
 .home-page .explore-section .feature-photos .text-content {
   margin-left: 190px;
-  margin-top: 80px;
+  margin-top: 70px;
 }
 .home-page .explore-section .feature-icons {
   margin-top: -40px;
@@ -632,11 +632,12 @@ textarea {
 }
 .home-page .why-use-section .why-use-market .framed {
   border: 1px solid #cccccc;
-  padding: 15px 25px 45px;
+  padding: 15px 25px 25px;
   width: 280px;
 }
-.home-page .why-use-section .why-use-market .market-selling-points {
-  min-height: 350px;
+.home-page .why-use-section .why-use-market .market-selling-point {
+  min-height: 150px;
+  margin-bottom: 20px;
 }
 .home-page .why-use-section .why-use-market .market-icon {
   display: block;
@@ -657,6 +658,9 @@ textarea {
 .home-page .why-use-section .why-use-market .market-icon.buyer-plan {
   width: 34px;
   height: 34px;
+}
+.home-page .why-use-section .discover-cta {
+  margin-top: 15px;
 }
 .home-page .why-use-section .discover-cta:after {
   margin-left: 29px;
