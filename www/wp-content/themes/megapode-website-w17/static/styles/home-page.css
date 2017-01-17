@@ -34,6 +34,16 @@ p {
   font-size: 8pt;
   line-height: 1.5;
 }
+a {
+  color: #262322;
+}
+ul,
+ol,
+li {
+  font-family: 'Roboto', sans-serif;
+  font-size: 8pt;
+  line-height: 1.5;
+}
 section {
   padding: 65px 0 75px 0;
 }
@@ -148,6 +158,25 @@ textarea {
 .form-row {
   display: block;
   position: relative;
+}
+.cms-img-wrapper {
+  margin: 30px auto;
+}
+.cms-img,
+.wp-caption-text {
+  display: block;
+  margin: 0 auto;
+  width: 290px;
+}
+blockquote {
+  margin: 30px auto;
+  width: 290px;
+}
+blockquote p {
+  margin: 0;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 12pt;
+  line-height: 1.25;
 }
 .logo {
   width: 305px;
@@ -365,6 +394,7 @@ textarea {
   padding: 20px 0;
 }
 .page-footer .list li {
+  font-size: 12pt;
   list-style: none;
   line-height: 1.5;
 }
