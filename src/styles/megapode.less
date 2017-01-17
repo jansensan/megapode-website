@@ -56,6 +56,16 @@ p {
   line-height: 1.5;
 }
 
+a {
+  color: @black;
+}
+
+ul, ol, li {
+  font-family: @ffSansSerif;
+  font-size: 8pt;
+  line-height: 1.5;
+}
+
 section {
   padding: 65px 0 75px 0;
 
@@ -175,4 +185,27 @@ textarea {
 .form-row {
   display: block;
   position: relative;
+}
+
+.cms-img-wrapper {
+  margin: 30px auto;
+}
+
+.cms-img,
+.wp-caption-text {
+  display: block;
+  margin: 0 auto;
+  width: 290px;
+}
+
+blockquote {
+  margin: 30px auto;
+  width: 290px;
+
+  p {
+    margin: 0;
+    font-family: @ffSerif;
+    font-size: 12pt;
+    line-height: 1.25;
+  }
 }
