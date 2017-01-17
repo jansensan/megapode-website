@@ -32,8 +32,8 @@
               <div class="ipad-bg stick-right">
                 <div class="ipad-screen plan">
                   <img
-                    src="<?php echo IMG_DIR; ?>home-feature-plan.png"
-                    alt=""
+                    src="<?php echo IMG_DIR; ?>home-feature-plan.gif"
+                    alt="Animation de l'aperçu d'un plan Megapode"
                   >
                 </div>
               </div>
@@ -74,8 +74,8 @@
               <div class="ipad-bg stick-left">
                 <div class="ipad-screen photos">
                   <img
-                    src="<?php echo IMG_DIR; ?>home-feature-photos.png"
-                    alt=""
+                    src="<?php echo IMG_DIR; ?>home-feature-photos.gif"
+                    alt="Animation de la fonctionalité des photos"
                   >
                 </div>
               </div>
@@ -88,7 +88,7 @@
                 <div class="ipad-screen icons">
                   <img
                     src="<?php echo IMG_DIR; ?>home-feature-icons.png"
-                    alt=""
+                    alt="Capture d'écran des icônes de Megapode"
                   >
                 </div>
               </div>
