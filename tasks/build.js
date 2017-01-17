@@ -14,6 +14,8 @@ gulp.task('build:comment-utiliser-page:dev', buildDevCommentUtiliserPage);
 gulp.task('build:comment-utiliser-page', buildCommentUtiliserPage);
 gulp.task('build:nous-joindre-page:dev', buildDevNousJoindrePage);
 gulp.task('build:nous-joindre-page', buildNousJoindrePage);
+gulp.task('build:megapode-page:dev', buildDevMegapodePage);
+gulp.task('build:megapode-page', buildMegapodePage);
 gulp.task('build:vendors:dev', buildDevVendors);
 gulp.task('build:vendors', buildVendors);
 
@@ -113,6 +115,26 @@ function buildNousJoindrePage() {
     .src(config.src.app.nousJoindre.prod)
     // concat files
     .pipe(glp.concat('nous-joindre-page.min.js'))
+    // minify
+    .pipe(glp.uglify())
+    // output file
+    .pipe(gulp.dest(config.dest.prod));
+}
+
+function buildDevMegapodePage() {
+  return gulp
+    .src(config.src.app.megapodePage.dev)
+    // concat files
+    .pipe(glp.concat('megapode-page.js'))
+    // output file
+    .pipe(gulp.dest(config.dest.dev));
+}
+
+function buildMegapodePage() {
+  return gulp
+    .src(config.src.app.megapodePage.prod)
+    // concat files
+    .pipe(glp.concat('megapode-page.min.js'))
     // minify
     .pipe(glp.uglify())
     // output file
