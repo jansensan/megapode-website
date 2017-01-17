@@ -54,14 +54,14 @@
         <div class="contact-details-row">
           <h2>Suivez-nous</h2>
 
-          <a class="contact-logo" href="#">
+          <a class="contact-logo" href="https://www.linkedin.com/company/megapode">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" role="img">
               <title>Logo LinkedIn</title>
               <path d="M32.409,0H2.583A2.555,2.555,0,0,0,0,2.522V32.475A2.556,2.556,0,0,0,2.583,35H32.409A2.561,2.561,0,0,0,35,32.475V2.522A2.559,2.559,0,0,0,32.409,0M10.381,29.825H5.189v-16.7h5.191ZM7.786,10.838a3.01,3.01,0,1,1,3.008-3.01,3.01,3.01,0,0,1-3.008,3.01M29.824,29.825H24.636V21.7c0-1.937-.035-4.428-2.7-4.428-2.7,0-3.116,2.11-3.116,4.288v8.263H13.636v-16.7h4.979V15.4h.07a5.455,5.455,0,0,1,4.912-2.7c5.257,0,6.227,3.46,6.227,7.957Z" style="fill:#231f20"/>
             </svg>
           </a>
 
-          <a class="contact-logo" href="#">
+          <a class="contact-logo" href="https://www.facebook.com/megapode/">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" role="img">
               <title>Logo Facebook</title>
               <rect width="35" height="35" rx="1.932" ry="1.932" style="fill:#262322"/>
