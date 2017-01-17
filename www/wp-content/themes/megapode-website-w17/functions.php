@@ -5,7 +5,7 @@
 //=========/------------------------------------------------
 
 // prod state
-define("IS_PROD", true);
+define("IS_PROD", false);
 
 
 // directories
