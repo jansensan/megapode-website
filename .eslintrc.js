@@ -4,8 +4,6 @@ module.exports = {
   },
   "extends": "eslint:recommended",
   "globals": {
-    // vendors
-    "_": true,
     "$": true,
     "angular": true,
     "signals": true
