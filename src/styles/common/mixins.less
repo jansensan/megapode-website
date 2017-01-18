@@ -9,8 +9,8 @@
 .dropShadow() {
   @offsetX: 0px;
   @offsetY: 1px;
-  @blurRadius: 3px;
-  @spreadRadius: 2px;
+  @blurRadius: 6px;
+  @spreadRadius: 1px;
   @shadowColor: rgba(0,0,0,0.15);
   -webkit-box-shadow: @offsetX @offsetY @blurRadius @spreadRadius @shadowColor;
   -moz-box-shadow: @offsetX @offsetY @blurRadius @spreadRadius @shadowColor;
@@ -18,5 +18,5 @@
 }
 
 .pngShadow() {
-  filter: drop-shadow(0px 3px 3px rgba(0,0,0,0.2));
+  filter: drop-shadow(0px 2px 3px rgba(0,0,0,0.15));
 }
