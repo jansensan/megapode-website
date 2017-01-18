@@ -21,9 +21,13 @@
     };
   }
 
-  function Controller(menuModel, veilModel) {
+  function Controller($document, menuModel, veilModel) {
+    // vars
+    var container, lastItem;
+
     // public api
     var vm = this;
+    vm.getTabIndex = getTabIndex;
     vm.hide = hide;
     vm.show = show;
 
@@ -31,6 +35,16 @@
     activate();
 
     // methods definitions
+    function getTabIndex() {
+      var tabIndex;
+      if (menuModel.isVisible) {
+        tabIndex = 0;
+      } else {
+        tabIndex = -1;
+      }
+      return tabIndex;
+    }
+
     function hide() {
       veilModel.dismissVeil();
       $('#mainMenu')
@@ -40,6 +54,7 @@
           'easeInCirc',   // easing
           function onHidden() {
             menuModel.isVisible = false;
+            $('#mainMenuButton').focus();
           }
         );
     }
@@ -52,15 +67,57 @@
           {right: 0},     // props
           500,            // duration
           'easeOutCirc',  // easing
-          function onShown() {}
+          function onShown() {
+            setFocusToContainer();
+          }
         );
     }
 
     // private methods definitions
     function activate() {
+      // set references
+      container = $('#mainMenu');
+      lastItem = $('#mainMenuLastItem');
+
+      // add listeners
       menuModel.menuDisplayRequested.add(onMenuDisplayRequested);
       menuModel.menuDismissalRequested.add(onMenuDismissalRequested);
       veilModel.veilClicked.add(onVeilClicked);
+      $document.on('keydown', onKeyPressed);
+    }
+
+    function isContainerFocused() {
+      return document.activeElement === container[0];
+    }
+
+    function isLastItemFocused() {
+      return document.activeElement === lastItem[0];
+    }
+
+    function onKeyPressed(event) {
+      if (!menuModel.isVisible) {
+        return;
+      }
+
+      if (event.keyCode === 9) { // tab
+        if (!event.shiftKey) {
+          // forward tabbing
+          if (isLastItemFocused()) {
+            // trap focus
+            event.preventDefault();
+            event.stopPropagation();
+            setFocusToContainer();
+          }
+        } else {
+          // backwards tabbing
+          if (isContainerFocused()) {
+            // trap focus
+            event.preventDefault();
+            event.stopPropagation();
+            setFocusToLastItem();
+          }
+        }
+      }
     }
 
     function onMenuDisplayRequested() {
@@ -77,7 +134,15 @@
       }
       hide();
     }
+
+    function setFocusToContainer() {
+      container.focus();
+    }
+
+    function setFocusToLastItem() {
+      lastItem.focus();
+    }
   }
-  Controller.$inject = ['menuModel', 'veilModel'];
+  Controller.$inject = ['$document', 'menuModel', 'veilModel'];
 
 })();

@@ -1,15 +1,40 @@
-<div id="mainMenu" class="main-menu">
+<div id="mainMenu" class="main-menu" tabindex="{{vm.getTabIndex()}}">
   <div class="logo-container">
     <mp-logo></mp-logo>
   </div>
   <div class="separator"></div>
   <nav class="main-menu-nav">
-    <a class="main-menu-item" href="/">Page d'accueil</a>
-    <a class="main-menu-item" href="/bonjour">Bonjour</a>
-    <a class="main-menu-item" href="/comment-utiliser-megapode">Comment utiliser Megapode</a>
-    <a class="main-menu-item" href="/regions-disponibles">Régions disponibles</a>
-    <a class="main-menu-item" href="#">Nos forfaits</a>
-    <a class="main-menu-item" href="/nous-joindre">Nous joindre</a>
+    <a
+      class="main-menu-item"
+      href="/"
+      tabindex="{{vm.getTabIndex()}}"
+    >Page d'accueil</a>
+    <a
+      class="main-menu-item"
+      href="/bonjour"
+      tabindex="{{vm.getTabIndex()}}"
+    >Bonjour</a>
+    <a
+      class="main-menu-item"
+      href="/comment-utiliser-megapode"
+      tabindex="{{vm.getTabIndex()}}"
+    >Comment utiliser Megapode</a>
+    <a
+      class="main-menu-item"
+      href="/regions-disponibles"
+      tabindex="{{vm.getTabIndex()}}"
+    >Régions disponibles</a>
+    <a
+      class="main-menu-item"
+      href="#"
+      tabindex="{{vm.getTabIndex()}}"
+    >Nos forfaits</a>
+    <a
+      id="mainMenuLastItem"
+      class="main-menu-item"
+      href="/nous-joindre"
+      tabindex="{{vm.getTabIndex()}}"
+    >Nous joindre</a>
   </nav>
   <div class="separator"></div>
 </div>
