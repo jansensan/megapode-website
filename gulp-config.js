@@ -26,6 +26,7 @@ module.exports = function () {
       ],
       bonjour: [
         globalComponents,
+        srcScriptDir + 'services/**/*.js',
         srcScriptDir + 'pages/bonjour/**/*.js'
       ],
       regionsDispo: [

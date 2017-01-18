@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="<?php echo CSS_DIR; ?>bonjour-page.css" >
   </head>
 
-  <body ng-app="mp.pages.BonjourPage">
+  <body ng-app="mp.pages.BonjourPage" ng-controller="BonjourPageController as controller">
     <mp-header></mp-header>
     <mp-veil></mp-veil>
     <mp-menu></mp-menu>
