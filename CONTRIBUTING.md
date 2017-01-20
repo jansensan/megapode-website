@@ -1,17 +1,17 @@
 # Contributing Guidelines
 
 - [Requirements](#requirements)
-	- [Front-End Development](#requirements-js)
-	- [WordPress Development](#requirements-wp)
+  - [Front-End Development](#requirements-js)
+  - [WordPress Development](#requirements-wp)
 - [Installation](#installation)
 - [Coding Styleguides](#coding-styleguide)
-	- [JavaScript](#js-coding-styleguide)
-	- [HTML and PHP](#html-coding-styleguide)
+  - [JavaScript](#js-coding-styleguide)
+  - [HTML and PHP](#html-coding-styleguide)
 - [Development Flow](#development-flow)
-	- [Branching Off](#branching-off)
-	- [JavaScript and Styles Development](#js-development)
-	- [WordPress Development](#wp-development)
-	- [Submitting Pull Requests](#pull-requests)
+  - [Branching Off](#branching-off)
+  - [JavaScript and Styles Development](#js-development)
+  - [WordPress Development](#wp-development)
+  - [Submitting Pull Requests](#pull-requests)
 
 
 <br/>
@@ -25,7 +25,7 @@
 
 <a id="requirements-wp"></a>
 ### WordPress Development
-- [MySQL database](https://www.mysql.com/)
+- [MySQL database](https://www.mysql.com/). Ensure that you copy the dev.megapode.ca database locally, see [WordPress instructions](https://codex.wordpress.org/Backing_Up_Your_Database).
 - A server that can run both PHP and the MySQL database. [MAMP](https://www.mamp.info/) can run both of these locally.
 
 
@@ -68,9 +68,9 @@ There is no need to cram as much as possible on a single line. It is preferred t
 0. Create a feature branch for the task to accomplish. See the [Branch Naming Convention](#branch-naming).
 
 0. Update the code according to the task outlined by the Github ticket. Make sure to follow these guidelines:
-	- [JavaScript Coding Styleguide](#js-coding-styleguide)
-	- [HTML and PHP Coding Styleguide](#html-coding-styleguide)
-	- [Commit Messages Convention](#commit-messages)
+  - [JavaScript Coding Styleguide](#js-coding-styleguide)
+  - [HTML and PHP Coding Styleguide](#html-coding-styleguide)
+  - [Commit Messages Convention](#commit-messages)
 
 0. Once the work is completed, submit a pull request towards the `master` branch. See [Submitting Pull Requests](#pull-requests).
 
