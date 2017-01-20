@@ -196,7 +196,7 @@
                     </svg>
                   </div>
                   <p class="subheading">Connaissez les dimensions et dispositions<br>des pièces avant de vous déplacer.</p>
-                  <p>Un plan Megapode vous montre les dimensions des pièces, les superficies à peinturer, la grandeur des fenêtres à habiller, l'ensoleillement, les prises et plinthes, et plusieurs autres informations.</p>
+                  <p>Un plan Megapode peut afficher les dimensions des pièces, les superficies à peinturer, la grandeur des fenêtres à habiller, l'ensoleillement, les prises et plinthes, et plusieurs autres informations.</p>
                 </div>
 
                 <a href="/comment-utiliser-megapode"
