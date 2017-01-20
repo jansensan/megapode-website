@@ -7,7 +7,6 @@ var config = require('../gulp-config')().styles,
 gulp.task('styles:home-page:dev', compileDevHomePage);
 gulp.task('styles:bonjour-page:dev', compileDevBonjourPage);
 gulp.task('styles:regions-dispo-page:dev', compileDevRegionsDispoPage);
-gulp.task('styles:comment-utiliser-page:dev', compileDevCommentUtiliserPage);
 gulp.task('styles:nous-joindre-page:dev', compileDevNousJoindrePage);
 gulp.task('styles:megapode-page:dev', compileDevMegapodePage);
 
@@ -42,13 +41,6 @@ function compileDevBonjourPage() {
 function compileDevRegionsDispoPage() {
   return compileDevStyles(
     config.src.regionsDisposPage,
-    config.dest
-  );
-}
-
-function compileDevCommentUtiliserPage() {
-  return compileDevStyles(
-    config.src.commentUtiliserPage,
     config.dest
   );
 }
