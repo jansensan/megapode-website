@@ -72,14 +72,6 @@
         </div>
         <div class="contact-details-row">
           <div class="contact-details-column">
-            <h2>Bureau des ventes</h2>
-            <p>
-              40, rue de Normandie<br>
-              Saint-Basile-le-Grand (Québec)<br>
-              J3N 1R4
-            </p>
-          </div>
-          <div class="contact-details-column">
             <h2>Centre technologique</h2>
             <p>
               1350, rue Mazurette, suite 317<br>
