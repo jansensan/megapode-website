@@ -157,7 +157,7 @@
                     </svg>
                   </div>
                   <p class="subheading">Diminuez le nombre de visites infructueuses.</p>
-                  <p>Notre application vous permettra de suivre en temps réel les acheteurs intéressés par vos propriétés munies d’un plan Megapode. Vous recevrez une alerte quand un acheteur potentiel visitera votre propriété. Nous offrirons également des statistiques sur leurs habitudes de magasinage et leurs critères d'achats.</p>
+                  <p>Les informations disponibles dans une fiche d’inscription ne permettent pas toujours de bien comprendre toutes les caractéristiques de la propriété. Megapode vous évite des déplacements inutiles en vous donnant des informations plus claires et plus approfondies.</p>
                 </div>
 
                 <a href="/comment-utiliser-megapode"
