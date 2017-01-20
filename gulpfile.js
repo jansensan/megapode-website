@@ -28,7 +28,6 @@ function dev() {
     'styles:home-page:dev',
     'styles:bonjour-page:dev',
     'styles:regions-dispo-page:dev',
-    'styles:comment-utiliser-page:dev',
     'styles:nous-joindre-page:dev',
     'styles:megapode-page:dev',
     'copy:vendor-styles:dev',
@@ -38,7 +37,6 @@ function dev() {
     'build:home-page:dev',
     'build:bonjour-page:dev',
     'build:regions-dispo-page:dev',
-    'build:comment-utiliser-page:dev',
     'build:nous-joindre-page:dev',
     'build:megapode-page:dev',
     // deploy to theme directory
@@ -61,7 +59,6 @@ function build() {
     'styles:home-page:dev',
     'styles:bonjour-page:dev',
     'styles:regions-dispo-page:dev',
-    'styles:comment-utiliser-page:dev',
     'styles:nous-joindre-page:dev',
     'styles:megapode-page:dev',
     'copy:vendor-styles:dev',
@@ -71,7 +68,6 @@ function build() {
     'build:home-page:dev',
     'build:bonjour-page:dev',
     'build:regions-dispo-page:dev',
-    'build:comment-utiliser-page:dev',
     'build:nous-joindre-page:dev',
     'build:megapode-page:dev',
     // deploy to theme directory
@@ -79,7 +75,6 @@ function build() {
     'build:home-page',
     'build:bonjour-page',
     'build:regions-dispo-page',
-    'build:comment-utiliser-page',
     'build:nous-joindre-page',
     'build:megapode-page',
     // ensure wp functions.php is set as dev
