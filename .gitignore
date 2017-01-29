@@ -15,11 +15,6 @@
 /assets
 /megapode-website-w17
 /node_modules
-/www/wp-content/themes/megapode-website-w17/static/scripts/bonjour-page.js
-/www/wp-content/themes/megapode-website-w17/static/scripts/comment-utiliser-page.js
-/www/wp-content/themes/megapode-website-w17/static/scripts/home-page.js
-/www/wp-content/themes/megapode-website-w17/static/scripts/megapode-templates.js
-/www/wp-content/themes/megapode-website-w17/static/scripts/nous-joindre-page.js
-/www/wp-content/themes/megapode-website-w17/static/scripts/regions-dispo-page.js
-/www/wp-content/themes/megapode-website-w17/static/scripts/vendors.js
+/www/wp-content/themes/megapode-website-w17/static/scripts/**/*
+/www/wp-content/themes/megapode-website-w17/static/styles/**/*
 /www/wp-content/uploads

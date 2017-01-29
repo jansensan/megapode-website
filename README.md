@@ -6,3 +6,8 @@ Sources for the Megapode marketing website: [http://megapode.ca/](http://megapod
 ## Contribution
 
 Read the [contributing guidelines](CONTRIBUTING.md) for instructions on how to contribute to this project.
+
+
+## Releasing
+
+Read the [releasing guidelines](RELEASING.md) for instructions on how to deploy the project to the different environments.
