@@ -10,10 +10,14 @@ module.exports = function () {
     templatesFileName = 'megapode-templates.js',
 
     distDir = 'www/',
-    themeDir = distDir + 'wp-content/themes/megapode-website-w17/',
+    themeName = 'megapode-website-w17';
+    themeDir = distDir + 'wp-content/themes/' + themeName + '/',
     themeStaticDir = themeDir + 'static/',
     themeScriptsDir = themeStaticDir + 'scripts/',
-    themeStylesDir = themeStaticDir + 'styles/';
+    themeStylesDir = themeStaticDir + 'styles/',
+
+    devServer = 'dev.megapode.ca',
+    prodServer = 'megapode.ca';
 
 
   var globalComponents = srcComponentsDir + '**/*.js'
@@ -120,6 +124,20 @@ module.exports = function () {
       dest: {
         stylesheets: themeStylesDir,
         scripts: themeScriptsDir
+      }
+    },
+    deploy: {
+      target: {
+        dev: devServer,
+        prod: prodServer
+      },
+      theme: {
+        dir: themeDir,
+        src: themeDir + '**/*',
+        dest: {
+          dev: devServer + '/wp-content/themes/' + themeName + '/',
+          prod: prodServer + '/wp-content/themes/' + themeName + '/'
+        }
       }
     },
     lint: {
