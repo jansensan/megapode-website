@@ -59,15 +59,15 @@
               <div class="text-content">
                 <h2>Les photos</h2>
                 <p class="subheading">
-                  Nos techniciens utilisent des équipements<br>
-                  de haute qualités afin de vous offrir<br>
-                  des photos professionnelles HDR.
+                  Nos professionels utilisent des équipements
+                  de haute qualités afin de vous offrir
+                  des photos HDR.
                 </p>
                 <p>
-                  Nous présentons vos propriétés sous leur meilleur angle<br>
+                  Nous présentons vos propriétés sous leur meilleur angle
                   afin de vous aider à vendre plus facilement et rapidement.
                 </p>
-                <a href="/comment-utiliser-megapode" class="explore-feature-cta">Voyez le fonctionnement</a>
+                <!-- <a href="/comment-utiliser-megapode" class="explore-feature-cta">Voyez le fonctionnement</a> -->
               </div>
             </div>
             <div class="explore-column">
