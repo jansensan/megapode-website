@@ -59,15 +59,14 @@
               <div class="text-content">
                 <h2>Les photos</h2>
                 <p class="subheading">
-                  Nos techniciens utilisent des équipements<br>
-                  de haute qualités afin de vous offrir<br>
-                  des photos professionnelles HDR.
+                  Nos professionels utilisent des équipements
+                  de haute qualités afin de vous offrir
+                  des photos HDR.
                 </p>
                 <p>
-                  Nous présentons vos propriétés sous leur meilleur angle<br>
+                  Nous présentons vos propriétés sous leur meilleur angle
                   afin de vous aider à vendre plus facilement et rapidement.
                 </p>
-                <a href="/comment-utiliser-megapode" class="explore-feature-cta">Voyez le fonctionnement</a>
               </div>
             </div>
             <div class="explore-column">
@@ -141,7 +140,10 @@
                       </g>
                     </svg>
                   </div>
-                  <p class="subheading">Établissez le contact avec des acheteurs.</p>
+                  <p class="subheading">
+                    Établissez le contact avec<br>
+                    des acheteurs.
+                  </p>
                   <p>Notre application vous permettra de suivre en temps réel les acheteurs intéressés par vos propriétés munies d’un plan Megapode. Vous recevrez une alerte quand un acheteur potentiel visitera votre propriété. Nous offrirons également des statistiques sur leurs habitudes de magasinage et leurs critères d'achats.</p>
                 </div>
 
@@ -156,7 +158,7 @@
                       </g>
                     </svg>
                   </div>
-                  <p class="subheading">Diminuez le nombre de visites infructueuses.</p>
+                  <p class="subheading">Diminuez le nombre<br>de visites infructueuses.</p>
                   <p>Les informations disponibles dans une fiche d’inscription ne permettent pas toujours de bien comprendre toutes les caractéristiques de la propriété. Megapode vous évite des déplacements inutiles en vous donnant des informations plus claires et plus approfondies.</p>
                 </div>
 
@@ -183,7 +185,7 @@
                       </g>
                     </svg>
                   </div>
-                  <p class="subheading">Une meilleure visualisation des lieux grâce<br>aux photos géolocalisées.</p>
+                  <p class="subheading">Une meilleure visualisation des lieux grâce aux photos géolocalisées.</p>
                   <p>Toutes les propriétés sont bâties à partir d’un plan, alors pourquoi ne pas utiliser un plan pour naviguer les photos? Grâce à nos plans Megapode vous comprendrez comment l’espace s’agence avec votre mode de vie avec confiance.</p>
                 </div>
 
@@ -195,7 +197,7 @@
                       <polygon points="48.75 0 48.75 7.5 67.499 7.5 67.499 48.748 74.998 48.748 74.998 7.5 90 7.5 90 48.748 97.499 48.748 97.499 0 48.75 0"/><polygon points="0 0 0 97.5 97.5 97.5 97.5 71.249 90 71.249 90 90 52.5 90 52.5 75 71.249 75 71.249 67.5 45 67.5 45 90 30.002 90 30.002 48.748 22.502 48.748 22.502 90 7.5 90 7.5 29.998 45 29.998 45 48.748 52.5 48.748 52.5 22.497 7.5 22.497 7.5 7.5 26.25 7.5 26.25 0 0 0"/>
                     </svg>
                   </div>
-                  <p class="subheading">Connaissez les dimensions et dispositions<br>des pièces avant de vous déplacer.</p>
+                  <p class="subheading">Connaissez les dimensions et dispositions des pièces avant<br>de vous déplacer.</p>
                   <p>Un plan Megapode peut afficher les dimensions des pièces, les superficies à peinturer, la grandeur des fenêtres à habiller, l'ensoleillement, les prises et plinthes, et plusieurs autres informations.</p>
                 </div>
 
