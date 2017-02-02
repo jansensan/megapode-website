@@ -38,12 +38,6 @@
 
         <div class="leaders-container">
           <div class="leader">
-            <div class="leader-photo">
-              <img
-                src="<?php echo IMG_DIR; ?>generic-user.gif"
-                alt="Photo de Luc Fontaine"
-              >
-            </div>
             <div class="leader-name">
               <span>Luc Fontaine</span>
               <a class="leader-linkedin" href="https://linkedin.com/in/luc-fontaine-00066369">
@@ -54,15 +48,9 @@
               </a>
             </div>
             <div class="leader-title">Président</div>
-            <p class="leader-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p class="leader-description">Gestionnaire et courtier immobilier depuis plusieurs années, Luc connaît les réalités du marché et nous permet de développer Megapode sur mesure selon les besoins des courtiers.</p>
           </div>
           <div class="leader">
-            <div class="leader-photo">
-              <img
-                src="<?php echo IMG_DIR; ?>generic-user.gif"
-                alt="Photo de Guillaume Langlois"
-              >
-            </div>
             <div class="leader-name">
               <span>Guillaume Langlois</span>
               <a class="leader-linkedin" href="https://linkedin.com/in/guillaume-langlois-4069762">
@@ -72,16 +60,10 @@
                 </svg>
               </a>
             </div>
-            <div class="leader-title">Chef des technologies</div>
-            <p class="leader-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <div class="leader-title">Technologie</div>
+            <p class="leader-description">Entrepreneur en série, Guillaume et son équipe Space & Dream nous permettent de faire évoluer Megapode pour mieux servir les courtiers grâce à leurs maîtrise de la technologie.</p>
           </div>
           <div class="leader">
-            <div class="leader-photo">
-              <img
-                src="<?php echo IMG_DIR; ?>generic-user.gif"
-                alt="Photo de Daniel Fontaine"
-              >
-            </div>
             <div class="leader-name">
               <span>Daniel Fontaine</span>
               <a class="leader-linkedin" href="https://linkedin.com/in/fontainedaniel">
@@ -91,43 +73,8 @@
                 </svg>
               </a>
             </div>
-            <div class="leader-title">Gardien de la marque</div>
-            <p class="leader-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-          </div>
-        </div>
-
-        <h2><a id="partenaires"></a>Nos partenaires</h2>
-
-        <div class="partners-container">
-          <div class="partner-logo">
-            <img
-              src="<?php echo IMG_DIR; ?>generic-partner-logo.gif"
-              alt="Logo de Partenaire Générique"
-            >
-          </div>
-          <div class="partner-logo">
-            <img
-              src="<?php echo IMG_DIR; ?>generic-partner-logo.gif"
-              alt="Logo de Partenaire Générique"
-            >
-          </div>
-          <div class="partner-logo">
-            <img
-              src="<?php echo IMG_DIR; ?>generic-partner-logo.gif"
-              alt="Logo de Partenaire Générique"
-            >
-          </div>
-          <div class="partner-logo">
-            <img
-              src="<?php echo IMG_DIR; ?>generic-partner-logo.gif"
-              alt="Logo de Partenaire Générique"
-            >
-          </div>
-          <div class="partner-logo">
-            <img
-              src="<?php echo IMG_DIR; ?>generic-partner-logo.gif"
-              alt="Logo de Partenaire Générique"
-            >
+            <div class="leader-title">Marketing</div>
+            <p class="leader-description">Designer de longue date, Daniel développe des opportunités de croissance et de partenariat pour Megapode afin de faire connaître Megapode au grand public.</p>
           </div>
         </div>
       </section>
