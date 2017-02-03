@@ -1,7 +1,7 @@
 {
   "name": "megapode-website",
   "description": "Sources du site megapode.ca",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "author": "Mat Janson Blanchet <mat.jb@jansensan.net> (http://jansensan.net)",
   "license": "UNLICENSED",
   "private": true,
