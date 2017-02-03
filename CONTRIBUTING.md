@@ -20,12 +20,16 @@
 
 <a id="requirements-js"></a>
 ### Front-End Development
+
+Ensure you install these globally:
+
 - [Node](https://nodejs.org/)
 - [Gulp](http://gulpjs.com/)
 
 <a id="requirements-wp"></a>
 ### WordPress Development
-- [MySQL database](https://www.mysql.com/). Ensure that you copy the dev.megapode.ca database locally, see [WordPress instructions](https://codex.wordpress.org/Backing_Up_Your_Database).
+- [MySQL database](https://www.mysql.com/). Ensure that you copy the dev.megapode.ca database locally, see [WordPress instructions](https://codex.wordpress.org/Backing_Up_Your_Database).  
+If you do not have access to the database, please ask the tech lead to provide you with the SQL query you need to copy the database locally.
 - A server that can run both PHP and the MySQL database. [MAMP](https://www.mamp.info/) can run both of these locally.
 
 
@@ -63,7 +67,7 @@ There is no need to cram as much as possible on a single line. It is preferred t
 <a id="branching-off"></a>
 ### Branching off
 
-0. Always branch off of the `master` branch. Make sure that you have checked out the latest version beforehand.
+0. Always branch off of the `develop` branch. Make sure that you have checked out the latest version beforehand.
 
 0. Create a feature branch for the task to accomplish. See the [Branch Naming Convention](#branch-naming).
 
@@ -72,7 +76,7 @@ There is no need to cram as much as possible on a single line. It is preferred t
   - [HTML and PHP Coding Styleguide](#html-coding-styleguide)
   - [Commit Messages Convention](#commit-messages)
 
-0. Once the work is completed, submit a pull request towards the `master` branch. See [Submitting Pull Requests](#pull-requests).
+0. Once the work is completed, submit a pull request towards the `develop` branch. See [Submitting Pull Requests](#pull-requests).
 
 
 <a id="branch-naming"></a>
@@ -144,13 +148,13 @@ The project is mainly a WordPress theme, and this is where you should attempt to
 <a id="pull-requests"></a>
 ### Submitting Pull Requests
 
-Once the work on your branch is complete, make sure to pull from the latest `master` branch and fix any conflict if necessary.
+Once the work on your branch is complete, make sure to pull from the latest `develop` branch and fix any conflict if necessary.
 
-0. Open the PR against `master`. All pull requests should target `master`.  
-_Important:_ do not commit the compiled files, only the changed source files.
+0. Open the PR against `develop`. All pull requests should target `develop`.  
+_Important:_ do not commit the compiled files, only the changed source files. The `.gitignore` config should already ensure that the compiled assets are not versioned.
 
 0. When a PR is made, a [travis-ci](https://travis-ci.org/) automated test will run.
-    - If issues are found with your PR, the technical architect will comment and open tasks. Please resolve any issues quickly, and close tasks on the PR as you push relevant fixes.
+    - If issues are found with your PR, the technical architect will comment and require changes. Please resolve any issue quickly, and push your relevant fixes.
     - If the build fails, get a fix together, push it to your branch, which will restart the verification build.
     Make sure to [squash your commits](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History) rather than just push additional ones to the branch.
 
