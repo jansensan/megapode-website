@@ -52,27 +52,44 @@
     margin:auto;
   }
   
-  .search-prompt {
-    position:absolute;
-    z-index:100;
-    width:100%;
-    height:200px;
-    top:150px;
-  }
+  .search-iframe {
+    margin: 20px auto;
+    width: 720px;
+    height: 100px;
+    padding: 30px;
+    position: relative;
+    top: 100px;
+    z-index: 2;
+    background-color: rgba(250,250,250,0.9);
+    border: 1px solid #e8e8e8;
+
+      .search-instructions {
+        padding: 0 0 15px 0;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      iframe {
+        border: 0px;
+        width: 420px;
+        z-index: 3;
+        display: block;
+        margin: auto
+      }
+    }
 
   .plan-cta h2, h1 {
-    text-align:center;
+    text-align: center;
   }
   
   .plan-cta {
-    border:0;
-    margin:auto;
+    border: 0;
+    margin: auto;
   }
-
 
   .megapode-head {
     position: relative;
-    top: 350px;
+    top: 170px;
     margin: 0 auto;
     width: 220px;
   }
