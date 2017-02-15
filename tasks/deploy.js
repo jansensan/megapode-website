@@ -1,6 +1,6 @@
 var config = require('../gulp-config')().deploy,
   argv = require('yargs').argv,
-  helper
+  git = require('gulp-git'),
   gulp = require('gulp'),
   GulpSSH = require('gulp-ssh'),
   fs = require('fs'),
@@ -11,7 +11,7 @@ var targetEnv, targetServer, ssh;
 
 // tasks definitions
 gulp.task('deploy:dev-theme', deployDevTheme);
-gulp.task('deploy:theme', deployTheme);
+gulp.task('deploy:theme', checkBranchName);
 
 gulp.task('ssh:init', initSSH);
 gulp.task('ssh:deploy-theme', sshDeployTheme);
@@ -99,6 +99,10 @@ function containsMinifiedVendors() {
   return scriptsDir.indexOf('vendors.min.js') !== -1;
 }
 
+function checkBranchName() {
+  git.revParse({args:'--abbrev-ref HEAD'}, onBranchNameObtained);
+}
+
 function getThemeDest() {
   var dest;
   switch (targetEnv) {
@@ -114,4 +118,17 @@ function getThemeDest() {
       throw new Error(wrongEnv);
   }
   return dest;
+}
+
+function onBranchNameObtained(error, name) {
+  if (name === 'master') {
+    deployTheme();
+  } else {
+    var wrongBranchError = 'Deployment to prod has been halted: ' +
+      'the current Git branch is "' + name + '", ' +
+      'and only "master" can be deployed to prod. ' +
+      'Please switch to "master" to run this task. ' +
+      'Read RELEASING.md for more details.';
+    throw new Error(wrongBranchError);
+  }
 }
