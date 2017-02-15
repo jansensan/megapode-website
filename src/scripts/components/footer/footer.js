@@ -7,9 +7,9 @@
       'mp.components.DownloadCTA',
       'mp.resources.Templates'
     ])
-    .directive('mpFooter', Directive);
+    .directive('mpFooter', Directive2);
 
-  function Directive() {
+  function Directive2() {
     return {
       restrict: 'E',
       scope: {},
